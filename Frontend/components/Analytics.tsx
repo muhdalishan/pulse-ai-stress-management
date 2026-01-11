@@ -249,25 +249,26 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 max-w-6xl mx-auto mb-6">
         {featureImportanceData.slice(0, 12).map((item, index) => {
           const intensity = item.importance / 0.18;
-          const hue = 240 - (intensity * 120);
+          // Green to Yellow to Red gradient (120 = green, 60 = yellow, 0 = red)
+          const hue = 120 - (intensity * 120);
           
           return (
             <div
               key={item.feature}
               className="relative h-16 sm:h-20 rounded-xl border border-white/10 overflow-hidden group hover:scale-105 transition-all duration-300 cursor-pointer"
               style={{
-                background: `linear-gradient(135deg, hsl(${hue}, 70%, ${25 + intensity * 35}%), hsl(${hue}, 80%, ${35 + intensity * 25}%))`,
-                boxShadow: `0 4px ${intensity * 15}px hsla(${hue}, 70%, 50%, 0.4)`
+                background: `linear-gradient(135deg, hsl(${hue}, 65%, ${35 + intensity * 25}%), hsl(${hue}, 75%, ${45 + intensity * 20}%))`,
+                boxShadow: `0 4px ${intensity * 15}px hsla(${hue}, 65%, 50%, 0.4)`
               }}
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center p-1 sm:p-2">
-                <div className="text-xs sm:text-xs font-bold text-white text-center leading-tight mb-1">
+                <div className="text-xs sm:text-xs font-bold text-white text-center leading-tight mb-1 drop-shadow-sm">
                   {item.feature.length > 10 ? item.feature.substring(0, 10) + '...' : item.feature}
                 </div>
-                <div className="text-sm sm:text-lg font-black text-white">
+                <div className="text-sm sm:text-lg font-black text-white drop-shadow-sm">
                   {(item.importance * 100).toFixed(1)}%
                 </div>
-                <div className="text-xs text-white/70 font-semibold">
+                <div className="text-xs text-white/80 font-semibold drop-shadow-sm">
                   #{item.rank}
                 </div>
               </div>
@@ -290,21 +291,21 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
         <div className="flex items-center gap-2">
           <div 
             className="w-3 h-3 rounded" 
-            style={{ background: 'hsl(200, 70%, 50%)' }}
+            style={{ background: 'hsl(120, 65%, 55%)' }}
           ></div>
           <span className="text-slate-400">Low Impact (5-8%)</span>
         </div>
         <div className="flex items-center gap-2">
           <div 
             className="w-3 h-3 rounded" 
-            style={{ background: 'hsl(170, 70%, 50%)' }}
+            style={{ background: 'hsl(60, 70%, 60%)' }}
           ></div>
           <span className="text-slate-400">Medium Impact (9-14%)</span>
         </div>
         <div className="flex items-center gap-2">
           <div 
             className="w-3 h-3 rounded" 
-            style={{ background: 'hsl(130, 70%, 50%)' }}
+            style={{ background: 'hsl(15, 70%, 60%)' }}
           ></div>
           <span className="text-slate-400">High Impact (15-18%)</span>
         </div>
@@ -946,7 +947,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2">
                       <div 
-                        className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                        className="h-2 rounded-full bg-gradient-to-r from-emerald-500 via-yellow-500 to-red-500"
                         style={{ width: `${(feature.importance / 0.18) * 100}%` }}
                       />
                     </div>
@@ -974,28 +975,28 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                     category: "Sleep & Recovery", 
                     features: ["Sleep Quality", "Sleep Duration"], 
                     impact: 29, 
-                    color: "bg-blue-500",
+                    color: "bg-emerald-500",
                     insight: "Sleep factors dominate stress prediction"
                   },
                   { 
                     category: "Work & Lifestyle", 
                     features: ["Work Hours", "Screen Time"], 
                     impact: 28, 
-                    color: "bg-purple-500",
+                    color: "bg-amber-500",
                     insight: "Work-life balance significantly affects stress"
                   },
                   { 
                     category: "Physical Health", 
                     features: ["Physical Activity", "Caffeine Intake"], 
                     impact: 23, 
-                    color: "bg-green-500",
+                    color: "bg-lime-500",
                     insight: "Physical habits moderate stress levels"
                   },
                   { 
                     category: "Social & Mental", 
                     features: ["Social Interactions", "Meditation"], 
                     impact: 13, 
-                    color: "bg-orange-500",
+                    color: "bg-rose-500",
                     insight: "Mental wellness practices provide protection"
                   }
                 ].map((cat) => (
@@ -1224,7 +1225,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                   </div>
                   <div className="mt-3 w-full bg-slate-700 rounded-full h-2">
                     <div 
-                      className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                      className="h-2 rounded-full bg-gradient-to-r from-emerald-500 via-yellow-500 to-red-500"
                       style={{ width: `${(model.accuracy / 100) * 100}%` }}
                     />
                   </div>
