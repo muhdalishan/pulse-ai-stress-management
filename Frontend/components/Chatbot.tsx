@@ -35,10 +35,22 @@ const Chatbot: React.FC = () => {
     ];
   };
 
+  // Load clicked buttons state from localStorage
+  const loadClickedButtons = () => {
+    try {
+      const saved = localStorage.getItem('pulsebot-clicked-buttons');
+      return saved ? JSON.parse(saved) : { neuralScan: false, calmSpace: false, articles: false };
+    } catch (error) {
+      console.error('Error loading clicked buttons state:', error);
+      return { neuralScan: false, calmSpace: false, articles: false };
+    }
+  };
+
   const [messages, setMessages] = useState<ChatMessage[]>(loadChatHistory());
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [lastUserMessage, setLastUserMessage] = useState<string>('');
+  const [clickedButtons, setClickedButtons] = useState(loadClickedButtons());
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Save chat history to localStorage whenever messages change
@@ -49,6 +61,15 @@ const Chatbot: React.FC = () => {
       console.error('Error saving chat history:', error);
     }
   }, [messages]);
+
+  // Save clicked buttons state to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('pulsebot-clicked-buttons', JSON.stringify(clickedButtons));
+    } catch (error) {
+      console.error('Error saving clicked buttons state:', error);
+    }
+  }, [clickedButtons]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -226,14 +247,17 @@ const Chatbot: React.FC = () => {
   };
 
   const handleTakeTest = () => {
+    setClickedButtons(prev => ({ ...prev, neuralScan: true }));
     navigate('/predict');
   };
 
   const handleVisitCalmSpace = () => {
+    setClickedButtons(prev => ({ ...prev, calmSpace: true }));
     navigate('/tools');
   };
 
   const handleVisitArticles = () => {
+    setClickedButtons(prev => ({ ...prev, articles: true }));
     navigate('/articles');
   };
 
@@ -246,7 +270,9 @@ const Chatbot: React.FC = () => {
       timestamp: new Date()
     };
     setMessages([defaultMessage]);
+    setClickedButtons({ neuralScan: false, calmSpace: false, articles: false }); // Reset clicked buttons
     localStorage.removeItem('pulsebot-chat-history');
+    localStorage.removeItem('pulsebot-clicked-buttons');
   };
 
   useEffect(() => {
@@ -359,8 +385,8 @@ const Chatbot: React.FC = () => {
                 </div>
                 <div className={`p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-indigo-600 text-white shadow-indigo-500/10' : 'bg-white/5 border border-white/5 text-slate-200'}`}>
                   {msg.text}
-                  {/* Show test button for bot messages that suggest taking the test - only when contextually appropriate */}
-                  {msg.role === 'model' && shouldShowTestButton(msg.text, userMessageText) && (
+                  {/* Show test button for bot messages that suggest taking the test - only when contextually appropriate and not clicked before */}
+                  {msg.role === 'model' && !clickedButtons.neuralScan && shouldShowTestButton(msg.text, userMessageText) && (
                     <div className="mt-3 pt-3 border-t border-white/10">
                       <button
                         onClick={handleTakeTest}
@@ -372,8 +398,8 @@ const Chatbot: React.FC = () => {
                       </button>
                     </div>
                   )}
-                  {/* Show CalmSpace button for bot messages that suggest breathing exercises - only when contextually appropriate */}
-                  {msg.role === 'model' && shouldShowCalmSpaceButton(msg.text, userMessageText, userStressAnalysis) && (
+                  {/* Show CalmSpace button for bot messages that suggest breathing exercises - only when contextually appropriate and not clicked before */}
+                  {msg.role === 'model' && !clickedButtons.calmSpace && shouldShowCalmSpaceButton(msg.text, userMessageText, userStressAnalysis) && (
                     <div className="mt-3 pt-3 border-t border-white/10">
                       <button
                         onClick={handleVisitCalmSpace}
@@ -381,6 +407,19 @@ const Chatbot: React.FC = () => {
                       >
                         <Wind size={14} />
                         Visit CalmSpace
+                        <ArrowRight size={12} />
+                      </button>
+                    </div>
+                  )}
+                  {/* Show Articles button for bot messages that suggest educational content - only when contextually appropriate and not clicked before */}
+                  {msg.role === 'model' && !clickedButtons.articles && shouldShowArticlesButton(msg.text, userMessageText) && (
+                    <div className="mt-3 pt-3 border-t border-white/10">
+                      <button
+                        onClick={handleVisitArticles}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs font-medium rounded-full transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:scale-105"
+                      >
+                        <BookOpen size={14} />
+                        Visit MindLabZenith
                         <ArrowRight size={12} />
                       </button>
                     </div>
