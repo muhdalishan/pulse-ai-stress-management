@@ -1,0 +1,891 @@
+Age,Gender,Sleep_Duration,Sleep_Quality,Physical_Activity,Screen_Time,Caffeine_Intake,Smoking_Habit,Work_Hours,Travel_Time,Social_Interactions,Meditation_Practice,Exercise_Type,Stress_Level
+30,Male,7,4,2,4,1,No,8,1,5,Yes,Cardio,Low
+35,Female,6,3,1,3,0,No,9,2,3,No,Yoga,Medium
+40,Male,7,4,2,4,1,No,8,1,5,Yes,Strength Training,High
+35,Male,7,4,2,4,1,No,8,1,5,Yes,Cardio,Low
+29,Female,8,5,3,2,1,No,7,1,4,Yes,Yoga,Low
+45,Male,6,3,2,4,2,Yes,10,2,3,No,Cardio,High
+32,Female,7,4,1,6,3,No,9,0.5,2,No,Aerobics,Medium
+37,Male,7.5,4,2.5,3.5,2,No,8,1.5,5,Yes,Strength Training,Medium
+50,Male,5.5,2,2,8,3,Yes,12,2,2,No,Walking,High
+40,Female,6,3,3,4.5,2,No,9,1,4,Yes,Pilates,Medium
+34,Male,6.5,4,2,7,3,No,8,1.5,3,No,Cardio,Medium
+28,Female,7,5,1.5,3,1,No,7,0.5,5,Yes,Yoga,Low
+42,Male,5,2,1,6,3,Yes,10,2,2,No,Strength Training,High
+34,Female,8,5,3,2,1,No,7,1,4,Yes,Yoga,Low
+38,Male,7,4,2,4,3,Yes,10,1,3,No,Cardio,Medium
+50,Female,6.5,3,3,4,2,Yes,12,2,2,No,Aerobics,High
+43,Male,7,4,1.5,6,1,No,9,1,4,Yes,Strength Training,Medium
+36,Female,7.5,4,2,3.5,0,No,8,1.5,4,Yes,Pilates,Low
+55,Male,5,2,1,5,3,Yes,14,2,1,No,Walking,High
+30,Female,8,5,3,2,1,No,7,1,5,Yes,Yoga,Low
+60,Male,6.5,3,2,4,1,No,10,1.5,3,Yes,Walking,Medium
+48,Female,7,4,2.5,3.5,2,Yes,9,1,4,No,Strength Training,High
+29,Male,7,5,1.5,5,2,No,8,0.5,3,Yes,Cardio,Medium
+35,Female,6,3,2,4,0,No,8,1,4,Yes,Pilates,Low
+41,Male,7.5,4,2,3.5,1,Yes,10,2,4,No,Strength Training,Medium
+28,Female,8,5,3,2,0,No,9,1,5,Yes,Yoga,Low
+46,Male,6,3,2.5,4,3,Yes,11,1.5,3,No,Cardio,High
+39,Female,7,4,2,3,2,Yes,9,0.5,4,Yes,Aerobics,Medium
+42,Male,7,4,2,5,1,No,8,2,3,Yes,Pilates,Medium
+30,Female,7.5,5,1.5,4,3,No,9,1,4,Yes,Strength Training,Low
+54,Male,6,3,3,5,2,Yes,12,2,2,No,Walking,High
+33,Female,8,5,2,3,1,No,7,1,4,Yes,Yoga,Low
+45,Male,7,4,1.5,3,2,No,8,1.5,3,Yes,Cardio,Medium
+38,Male,7,4,2,3,1,No,9,2,3,Yes,Strength Training,Medium
+41,Female,7.5,5,2,4,2,Yes,10,1,4,No,Pilates,Medium
+50,Male,6,3,1.5,4,3,Yes,12,2,2,No,Walking,High
+32,Female,8,5,2,3,1,No,8,1,5,Yes,Yoga,Low
+44,Male,7,4,2.5,5,1,No,10,2,3,Yes,Cardio,Medium
+39,Female,6.5,3,3,3,2,No,9,1.5,4,Yes,Strength Training,Low
+42,Male,7,4,1.5,4,3,Yes,11,2,2,No,Pilates,Medium
+48,Female,6.5,4,2,3,1,No,8,1,4,Yes,Aerobics,High
+29,Male,8,5,2,2,0,Yes,8,1,5,No,Cardio,Low
+45,Female,7,4,3,4,2,Yes,10,1.5,4,Yes,Pilates,Medium
+34,Male,6,3,4,5,1,No,9,2,3,Yes,Strength Training,High
+40,Female,7,5,3,3,0,Yes,8,1.5,4,No,Cardio,Medium
+38,Male,7.5,4,2,4,1,No,9,2,3,Yes,Aerobics,High
+49,Female,6,3,3,5,2,No,12,1,2,No,Yoga,Medium
+30,Male,8,5,2.5,4,0,Yes,10,2,4,Yes,Pilates,Low
+46,Female,7,4,2,3,1,No,9,1,4,Yes,Strength Training,Medium
+41,Male,7.5,5,3,4,2,Yes,10,1.5,3,No,Cardio,High
+39,Female,7,3,2,3,0,No,8,2,3,Yes,Yoga,Low
+43,Male,7,4,2.5,4,1,No,9,2,4,Yes,Pilates,Medium
+35,Female,8,5,2,3,1,No,10,1,5,Yes,Strength Training,Medium
+36,Male,7,4,2,3,1,Yes,8,2,4,No,Yoga,Medium
+41,Female,7,5,2.5,4,2,No,10,1.5,4,Yes,Strength Training,High
+46,Male,6.5,3,3,4,1,No,12,2,3,No,Pilates,Medium
+34,Female,7.5,4,2,3,1,Yes,9,2,4,Yes,Cardio,Low
+39,Male,8,5,3,4,2,No,9,1.5,4,Yes,Strength Training,Medium
+33,Female,6,3,2.5,4,0,No,8,2,3,Yes,Yoga,High
+47,Male,6.5,3,4,5,1,Yes,10,2,3,No,Pilates,Medium
+50,Female,7,4,2,3,2,No,9,1.5,4,Yes,Cardio,High
+42,Male,7,5,3,4,1,Yes,8,2,3,Yes,Strength Training,Medium
+35,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+43,Male,6,3,2,4,1,Yes,11,2,3,No,Yoga,Medium
+36,Female,7,4,3,4,1,Yes,9,2,4,Yes,Strength Training,Low
+38,Male,6.5,4,3,5,2,No,10,1.5,4,Yes,Cardio,Medium
+31,Female,7,5,2.5,3,1,Yes,8,2,3,No,Pilates,Low
+45,Male,6,3,4,5,1,No,12,2,3,Yes,Strength Training,High
+33,Female,7,4,3,3,2,No,8,1.5,4,Yes,Cardio,Medium
+41,Male,7.5,5,2.5,4,1,Yes,10,2,3,Yes,Strength Training,High
+37,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Medium
+48,Male,6,3,3,5,1,No,10,2,3,Yes,Cardio,Low
+18,Male,7,4,2,3,1,Yes,8,2,4,No,Yoga,Medium
+22,Female,7,5,2.5,4,2,No,10,1.5,4,Yes,Strength Training,High
+28,Male,6.5,3,3,4,1,No,12,2,3,No,Pilates,Medium
+21,Female,7.5,4,2,3,1,Yes,9,2,4,Yes,Cardio,Low
+27,Male,8,5,3,4,2,No,9,1.5,4,Yes,Strength Training,Medium
+30,Female,6,3,2.5,4,0,No,8,2,3,Yes,Yoga,High
+25,Male,6.5,3,4,5,1,Yes,10,2,3,No,Pilates,Medium
+35,Female,7,4,2,3,2,No,9,1.5,4,Yes,Cardio,High
+26,Male,7,5,3,4,1,Yes,8,2,3,Yes,Strength Training,Medium
+29,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+24,Male,6,3,2,4,1,Yes,11,2,3,No,Yoga,Medium
+31,Female,7,4,3,4,1,Yes,9,2,4,Yes,Strength Training,Low
+23,Male,6.5,4,3,5,2,No,10,1.5,4,Yes,Cardio,Medium
+28,Female,7,5,2.5,3,1,Yes,8,2,3,No,Pilates,Low
+40,Male,6,3,4,5,1,No,12,2,3,Yes,Strength Training,High
+32,Female,7,4,3,3,2,No,8,1.5,4,Yes,Cardio,Medium
+36,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Medium
+25,Male,6,3,3,5,1,No,10,2,3,Yes,Cardio,Low
+18,Male,7,4,2,3,1,Yes,8,1.5,3,No,Yoga,Low
+19,Female,7,5,2,4,1,No,8,2,4,Yes,Pilates,Medium
+21,Male,6,3,4,5,2,No,9,2.5,5,No,Strength Training,High
+22,Female,8,5,3,4,1,Yes,10,1.5,4,Yes,Cardio,Medium
+23,Male,7.5,4,2,3,1,No,8,2,4,Yes,Yoga,Low
+24,Female,7,4,3,3,2,No,9,2,5,Yes,Pilates,High
+25,Male,6.5,3,4,5,1,Yes,10,2,4,No,Strength Training,Medium
+26,Female,8,5,3,4,0,Yes,8,1.5,4,Yes,Cardio,Medium
+27,Male,7,4,2,3,1,No,9,2,5,Yes,Yoga,High
+28,Female,6,3,3,4,2,Yes,10,2,4,Yes,Pilates,Low
+29,Male,7,5,2,3,1,No,9,1.5,4,Yes,Strength Training,Medium
+30,Female,8,5,3,4,1,No,10,2,5,Yes,Cardio,High
+31,Male,7,4,2,3,2,Yes,9,2,4,No,Yoga,Medium
+32,Female,6.5,4,3,4,1,No,8,1.5,4,Yes,Pilates,Low
+33,Male,7,5,4,5,2,Yes,10,2.5,5,No,Strength Training,Medium
+34,Female,8,4,3,3,1,No,9,2,4,Yes,Yoga,High
+35,Male,7.5,4,3,4,1,Yes,10,2,4,Yes,Pilates,Medium
+36,Female,6.5,3,4,5,1,Yes,9,2,5,No,Cardio,Low
+37,Male,7,4,2,3,1,No,8,2,4,Yes,Yoga,Medium
+38,Female,6,3,3,4,1,Yes,10,2,4,No,Strength Training,High
+39,Male,7,5,3,4,2,Yes,8,1.5,5,Yes,Pilates,Medium
+40,Female,7,4,3,4,1,No,9,2,4,Yes,Cardio,Low
+41,Male,6.5,3,4,5,2,Yes,10,2,5,Yes,Strength Training,Medium
+42,Female,7,4,3,4,1,No,9,2,4,No,Pilates,High
+43,Male,7.5,5,3,4,1,No,10,1.5,5,Yes,Cardio,Low
+44,Female,6.5,4,4,5,2,No,8,2,3,No,Strength Training,Medium
+45,Male,7,4,3,4,1,Yes,9,1.5,4,Yes,Yoga,High
+46,Female,8,5,3,4,2,No,10,2,5,No,Pilates,Low
+47,Male,6,3,4,5,1,Yes,8,2.5,4,Yes,Strength Training,Medium
+48,Female,7,4,2,3,1,Yes,9,1.5,3,No,Cardio,High
+49,Male,8,5,3,4,2,No,10,2,4,Yes,Yoga,Low
+50,Female,6.5,4,3,4,1,Yes,9,2,5,Yes,Pilates,Medium
+18,Male,7,4,2,3,1,No,8,1.5,3,Yes,Strength Training,Low
+19,Female,8,5,3,4,1,No,9,2,4,Yes,Yoga,Medium
+20,Male,7,4,3,4,2,Yes,10,2,4,No,Pilates,High
+21,Female,6,3,4,5,1,Yes,9,2,5,Yes,Cardio,Medium
+22,Male,7,5,3,4,1,No,8,2,4,No,Strength Training,High
+23,Female,8,5,3,4,2,Yes,9,2.5,5,Yes,Yoga,Medium
+24,Male,6,3,4,5,1,Yes,9,1.5,4,No,Pilates,Low
+25,Female,7,4,2,3,1,No,8,2,4,Yes,Strength Training,High
+26,Male,7,4,3,4,2,No,9,2,4,Yes,Yoga,Medium
+27,Female,8,5,2,3,1,Yes,9,2,5,No,Cardio,High
+28,Male,7,4,3,4,1,No,8,1.5,4,Yes,Pilates,Low
+29,Female,6,3,3,4,2,Yes,10,2,5,No,Strength Training,Medium
+30,Male,7,5,3,4,1,No,9,1.5,4,Yes,Cardio,High
+31,Female,7,4,2,3,1,Yes,8,1.5,3,No,Pilates,Low
+32,Male,8,5,3,4,1,No,9,2,4,Yes,Strength Training,Medium
+33,Female,6,4,3,4,2,No,8,2,4,Yes,Yoga,High
+34,Male,7,4,3,4,1,Yes,9,2,4,No,Pilates,Low
+35,Female,6,3,4,5,1,Yes,8,2.5,5,Yes,Cardio,Medium
+36,Male,7,5,2,3,1,No,9,1.5,4,Yes,Strength Training,High
+37,Female,7,4,3,4,2,No,8,2,5,No,Yoga,Low
+38,Male,8,5,3,4,1,Yes,10,2,5,Yes,Pilates,Medium
+39,Female,7,4,3,4,1,No,9,1.5,4,Yes,Cardio,High
+40,Male,6,3,3,4,2,No,9,2,4,No,Strength Training,Medium
+41,Female,8,5,3,4,1,Yes,10,2,5,Yes,Yoga,High
+42,Male,7,4,2,3,1,No,8,2,4,No,Pilates,Medium
+43,Female,7,5,3,4,2,Yes,9,1.5,5,Yes,Strength Training,Low
+44,Male,7,4,3,4,1,No,8,2,4,No,Cardio,High
+45,Female,6,3,3,4,1,Yes,9,1.5,4,Yes,Pilates,Medium
+46,Male,6,4,3,4,1,Yes,8,2,5,No,Strength Training,Low
+47,Female,7,5,2,3,1,No,9,1.5,4,Yes,Cardio,Medium
+48,Male,8,4,3,5,2,Yes,9,2,5,Yes,Pilates,High
+49,Female,7,4,2,3,1,No,8,2,4,No,Strength Training,Medium
+50,Male,6,3,3,4,2,Yes,8,2,5,Yes,Yoga,High
+51,Female,7,5,3,4,2,Yes,9,2,4,No,Cardio,Low
+52,Male,8,4,2,3,1,No,9,2,5,Yes,Pilates,Medium
+53,Female,7,4,3,5,1,Yes,8,2,4,Yes,Yoga,High
+54,Male,6,3,3,4,2,No,9,2,4,No,Cardio,Low
+55,Female,7,5,4,5,1,Yes,9,1.5,5,Yes,Strength Training,Medium
+32,Female,7,4,2,4,1,No,8,2,4,Yes,Cardio,Medium
+45,Male,6,3,3,4,2,Yes,11,2,3,No,Pilates,High
+39,Female,8,5,3,3,1,No,9,1.5,4,Yes,Strength Training,Low
+41,Male,7,4,2,3,1,No,10,2,3,Yes,Yoga,Medium
+35,Female,6.5,3,2.5,4,1,Yes,8,1.5,4,No,Strength Training,High
+43,Male,7,4,3,5,2,No,9,2,4,Yes,Cardio,Low
+36,Female,7,4,2,3,1,Yes,9,1.5,4,Yes,Pilates,Medium
+50,Male,7,5,2.5,3,1,No,10,2,3,Yes,Strength Training,High
+44,Female,6,3,3,4,2,Yes,9,2,4,No,Yoga,Medium
+40,Male,6.5,4,4,5,1,No,11,2,3,Yes,Pilates,Low
+47,Female,7.5,4,2,3,1,No,8,1.5,4,Yes,Cardio,High
+34,Male,7,3,3,4,2,Yes,10,2,4,No,Strength Training,Medium
+39,Female,8,5,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+46,Male,7,4,2.5,4,1,No,8,1.5,3,Yes,Cardio,Medium
+32,Female,6.5,3,3,4,1,Yes,9,2,4,No,Strength Training,High
+37,Male,7,5,3,4,2,No,9,2,4,Yes,Yoga,Low
+42,Female,7,4,2.5,4,1,Yes,8,1.5,3,No,Pilates,Medium
+45,Male,6.5,4,2,3,2,No,10,2,4,Yes,Strength Training,High
+34,Female,7,3,3,5,1,Yes,9,1.5,4,No,Yoga,Medium
+49,Male,7,4,3,5,1,No,10,2,3,Yes,Pilates,High
+44,Female,7,5,3,4,2,Yes,9,2,4,Yes,Cardio,Medium
+38,Male,7,4,3,3,1,Yes,9,2,4,Yes,Strength Training,Low
+35,Female,7.5,5,2,3,1,No,9,2,3,Yes,Yoga,High
+40,Male,7,4,3,4,2,Yes,8,1.5,4,No,Pilates,Medium
+33,Male,6,4,3,3,2,No,8,2,4,Yes,Strength Training,Medium
+42,Female,7,5,2,4,1,Yes,9,2,3,No,Yoga,High
+48,Male,7,4,3,4,1,No,10,2,3,Yes,Pilates,Low
+36,Female,7,3,2,3,1,No,8,1.5,4,Yes,Cardio,Medium
+39,Male,7,4,3,4,2,Yes,10,2,3,No,Strength Training,High
+50,Female,6,5,2,3,1,Yes,9,2,4,Yes,Pilates,Low
+34,Male,7,3,3,5,1,No,8,1.5,4,Yes,Cardio,Medium
+41,Female,6,4,2,3,1,Yes,9,2,3,No,Strength Training,High
+47,Male,7.5,5,3,4,2,No,10,2,4,Yes,Yoga,Low
+39,Female,6.5,4,2,3,1,Yes,8,2,3,Yes,Pilates,Medium
+45,Male,7,3,3,4,1,No,10,2,4,No,Strength Training,High
+38,Female,7,4,2,4,1,No,9,2,4,Yes,Yoga,Low
+36,Male,6.5,4,3,5,1,Yes,8,1.5,4,No,Strength Training,Medium
+44,Female,6,3,3,4,1,No,9,2,3,Yes,Pilates,High
+49,Male,7,5,2,3,1,Yes,10,2,4,No,Yoga,Low
+37,Female,7,4,3,5,1,No,9,2,3,Yes,Cardio,Medium
+41,Male,7,5,2,3,1,Yes,9,2,4,No,Strength Training,High
+46,Female,7,4,3,5,2,Yes,10,2,4,Yes,Pilates,Low
+38,Male,7,3,2,3,1,No,9,1.5,4,Yes,Cardio,Medium
+40,Female,7,4,3,4,2,Yes,9,2,3,No,Strength Training,High
+48,Male,7,5,3,4,1,No,10,2,4,Yes,Yoga,Low
+35,Female,6,4,3,4,2,Yes,9,1.5,4,Yes,Pilates,Medium
+43,Male,7,3,3,4,1,No,10,2,3,Yes,Strength Training,High
+34,Male,6,4,2,3,1,No,8,2,4,Yes,Yoga,Medium
+40,Female,7,4,3,4,1,Yes,9,2,3,No,Strength Training,High
+45,Male,7,5,2,3,1,Yes,10,2,4,Yes,Pilates,Low
+36,Female,6,4,3,4,1,No,9,2,3,Yes,Cardio,Medium
+42,Male,7,4,2,4,1,No,8,2,4,No,Strength Training,High
+48,Female,6,3,3,5,1,Yes,9,2,4,Yes,Pilates,Low
+39,Male,7,4,2,3,1,Yes,10,2,3,No,Yoga,Medium
+41,Female,6.5,4,2,3,1,No,9,1.5,4,Yes,Strength Training,High
+47,Male,7,4,3,4,2,Yes,8,2,4,No,Pilates,Low
+38,Female,6,3,2,3,1,No,9,2,3,Yes,Cardio,Medium
+43,Male,7,5,3,4,2,Yes,9,2,4,No,Strength Training,High
+46,Female,6.5,3,3,5,1,Yes,8,2,3,Yes,Pilates,Low
+38,Male,7,4,2,4,1,No,10,2,4,Yes,Cardio,Medium
+44,Female,6.5,4,3,5,1,No,9,2,4,Yes,Strength Training,High
+49,Male,7,3,2,4,1,Yes,8,2,4,No,Pilates,Low
+37,Female,6,3,2,4,1,No,9,2,4,Yes,Yoga,Medium
+45,Male,7,5,3,4,1,No,10,2,4,Yes,Strength Training,High
+40,Female,6,4,2,3,1,Yes,8,1.5,4,No,Pilates,Low
+37,Male,7,4,2,4,1,No,9,2,3,Yes,Cardio,Medium
+50,Female,6,3,3,5,2,Yes,9,2,4,No,Strength Training,High
+41,Male,7,3,2,4,1,Yes,8,2,4,Yes,Pilates,Low
+48,Female,7,4,2,3,1,No,9,2,3,Yes,Yoga,Medium
+44,Male,6.5,4,3,5,1,Yes,8,2,4,No,Strength Training,High
+42,Female,7,3,2,4,1,Yes,9,2,4,Yes,Pilates,Low
+46,Male,6,3,2,4,1,No,9,2,4,Yes,Yoga,Medium
+39,Female,7,4,3,5,1,No,10,2,4,No,Strength Training,High
+35,Male,6,3,2,4,1,No,8,2,3,Yes,Cardio,Low
+32,Female,6,3,1,4,0,No,8,2,3,Yes,Yoga,Medium
+39,Male,7,4,2,5,1,Yes,9,1,4,Yes,Cardio,High
+40,Female,6,3,3,4.5,2,No,9,1,4,Yes,Pilates,Medium
+34,Male,6.5,4,2,7,3,No,8,1.5,3,No,Cardio,Medium
+28,Female,7,5,1.5,3,1,No,7,0.5,5,Yes,Yoga,Low
+42,Male,5,2,1,6,3,Yes,10,2,2,No,Strength Training,High
+34,Female,8,5,3,2,1,No,7,1,4,Yes,Yoga,Low
+38,Male,7,4,2,4,3,Yes,10,1,3,No,Cardio,Medium
+50,Female,6.5,3,3,4,2,Yes,12,2,2,No,Aerobics,High
+43,Male,7,4,1.5,6,1,No,9,1,4,Yes,Strength Training,Medium
+36,Female,7.5,4,2,3.5,0,No,8,1.5,4,Yes,Pilates,Low
+55,Male,5,2,1,5,3,Yes,14,2,1,No,Walking,High
+30,Female,8,5,3,2,1,No,7,1,5,Yes,Yoga,Low
+60,Male,6.5,3,2,4,1,No,10,1.5,3,Yes,Walking,Medium
+48,Female,7,4,2.5,3.5,2,Yes,9,1,4,No,Strength Training,High
+29,Male,7,5,1.5,5,2,No,8,0.5,3,Yes,Cardio,Medium
+35,Female,6,3,2,4,0,No,8,1,4,Yes,Pilates,Low
+41,Male,7.5,4,2,3.5,1,Yes,10,2,4,No,Strength Training,Medium
+28,Female,8,5,3,2,0,No,9,1,5,Yes,Yoga,Low
+46,Male,6,3,2.5,4,3,Yes,11,1.5,3,No,Cardio,High
+39,Female,7,4,2,3,2,Yes,9,0.5,4,Yes,Aerobics,Medium
+42,Male,7,4,2,5,1,No,8,2,3,Yes,Pilates,Medium
+30,Female,7.5,5,1.5,4,3,No,9,1,4,Yes,Strength Training,Low
+54,Male,6,3,3,5,2,Yes,12,2,2,No,Walking,High
+33,Female,8,5,2,3,1,No,7,1,4,Yes,Yoga,Low
+45,Male,7,4,1.5,3,2,No,8,1.5,3,Yes,Cardio,Medium
+38,Male,7,4,2,3,1,No,9,2,3,Yes,Strength Training,Medium
+41,Female,7.5,5,2,4,2,Yes,10,1,4,No,Pilates,Medium
+50,Male,6,3,1.5,4,3,Yes,12,2,2,No,Walking,High
+32,Female,8,5,2,3,1,No,8,1,5,Yes,Yoga,Low
+44,Male,7,4,2.5,5,1,No,10,2,3,Yes,Cardio,Medium
+39,Female,6.5,3,3,3,2,No,9,1.5,4,Yes,Strength Training,Low
+42,Male,7,4,1.5,4,3,Yes,11,2,2,No,Pilates,Medium
+48,Female,6.5,4,2,3,1,No,8,1,4,Yes,Aerobics,High
+29,Male,8,5,2,2,0,Yes,8,1,5,No,Cardio,Low
+45,Female,7,4,3,4,2,Yes,10,1.5,4,Yes,Pilates,Medium
+34,Male,6,3,4,5,1,No,9,2,3,Yes,Strength Training,High
+40,Female,7,5,3,3,0,Yes,8,1.5,4,No,Cardio,Medium
+38,Male,7.5,4,2,4,1,No,9,2,3,Yes,Aerobics,High
+49,Female,6,3,3,5,2,No,12,1,2,No,Yoga,Medium
+30,Male,8,5,2.5,4,0,Yes,10,2,4,Yes,Pilates,Low
+46,Female,7,4,2,3,1,No,9,1,4,Yes,Strength Training,Medium
+41,Male,7.5,5,3,4,2,Yes,10,1.5,3,No,Cardio,High
+39,Female,7,3,2,3,0,No,8,2,3,Yes,Yoga,Low
+43,Male,7,4,2.5,4,1,No,9,2,4,Yes,Pilates,Medium
+35,Female,8,5,2,3,1,No,10,1,5,Yes,Strength Training,Medium
+36,Male,7,4,2,3,1,Yes,8,2,4,No,Yoga,Medium
+41,Female,7,5,2.5,4,2,No,10,1.5,4,Yes,Strength Training,High
+46,Male,6.5,3,3,4,1,No,12,2,3,No,Pilates,Medium
+34,Female,7.5,4,2,3,1,Yes,9,2,4,Yes,Cardio,Low
+39,Male,8,5,3,4,2,No,9,1.5,4,Yes,Strength Training,Medium
+33,Female,6,3,2.5,4,0,No,8,2,3,Yes,Yoga,High
+47,Male,6.5,3,4,5,1,Yes,10,2,3,No,Pilates,Medium
+50,Female,7,4,2,3,2,No,9,1.5,4,Yes,Cardio,High
+42,Male,7,5,3,4,1,Yes,8,2,3,Yes,Strength Training,Medium
+35,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+43,Male,6,3,2,4,1,Yes,11,2,3,No,Yoga,Medium
+36,Female,7,4,3,4,1,Yes,9,2,4,Yes,Strength Training,Low
+38,Male,6.5,4,3,5,2,No,10,1.5,4,Yes,Cardio,Medium
+31,Female,7,5,2.5,3,1,Yes,8,2,3,No,Pilates,Low
+45,Male,6,3,4,5,1,No,12,2,3,Yes,Strength Training,High
+33,Female,7,4,3,3,2,No,8,1.5,4,Yes,Cardio,Medium
+41,Male,7.5,5,2.5,4,1,Yes,10,2,3,Yes,Strength Training,High
+37,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Medium
+48,Male,6,3,3,5,1,No,10,2,3,Yes,Cardio,Low
+18,Male,7,4,2,3,1,Yes,8,2,4,No,Yoga,Medium
+22,Female,7,5,2.5,4,2,No,10,1.5,4,Yes,Strength Training,High
+28,Male,6.5,3,3,4,1,No,12,2,3,No,Pilates,Medium
+21,Female,7.5,4,2,3,1,Yes,9,2,4,Yes,Cardio,Low
+27,Male,8,5,3,4,2,No,9,1.5,4,Yes,Strength Training,Medium
+30,Female,6,3,2.5,4,0,No,8,2,3,Yes,Yoga,High
+25,Male,6.5,3,4,5,1,Yes,10,2,3,No,Pilates,Medium
+35,Female,7,4,2,3,2,No,9,1.5,4,Yes,Cardio,High
+26,Male,7,5,3,4,1,Yes,8,2,3,Yes,Strength Training,Medium
+29,Female,7,4,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+24,Male,6,3,2,4,1,Yes,11,2,3,No,Yoga,Medium
+31,Female,7,4,3,4,1,Yes,9,2,4,Yes,Strength Training,Low
+23,Male,6.5,4,3,5,2,No,10,1.5,4,Yes,Cardio,Medium
+45,Male,5.2,3,4,5,2,Yes,9,4,3,Yes,Cardio,High
+32,Female,6,3,3,4,1,Yes,8,3,2,No,Yoga,High
+38,Male,5.5,4,4,5,2,Yes,9,4,4,Yes,Strength Training,High
+41,Female,6.1,3,3,4,1,Yes,8,3,3,Yes,Pilates,High
+36,Male,5.8,3.5,4,5,2,Yes,9,4,4,Yes,Cardio,High
+29,Female,6.5,4,2,4,1,Yes,8,3,3,Yes,Yoga,High
+50,Male,5.4,3.2,4,5,3,Yes,10,4,4,Yes,Strength Training,High
+33,Female,6.2,3.5,3,4,2,Yes,8,3,3,No,Meditation,High
+39,Male,5.7,3.8,4,5,2,Yes,9,4,4,Yes,Cardio,High
+28,Female,6.3,3.2,3,4,1,No,8,3,2,Yes,Yoga,High
+42,Male,5.9,4.5,4,5,3,Yes,10,4,3,Yes,Strength Training,High
+35,Female,6.4,3.1,2,3,2,No,8,3,3,Yes,Pilates,High
+48,Male,5.6,4,4,5,3,Yes,9,4,4,Yes,Cardio,High
+30,Female,6.5,3,2,4,1,No,8,3,2,Yes,Yoga,High
+44,Male,5.3,3.5,4,5,2,Yes,9,4,3,Yes,Strength Training,High
+37,Female,6.2,3.8,3,4,1,Yes,8,3,3,No,Pilates,High
+40,Male,5.5,4,4,5,3,Yes,9,4,4,Yes,Cardio,High
+31,Female,6.1,3.2,2,3,1,No,8,3,2,Yes,Yoga,High
+46,Male,5.8,3.7,4,5,3,Yes,10,4,3,Yes,Strength Training,High
+34,Female,6.3,3.4,3,4,2,No,8,3,3,Yes,Pilates,High
+45,Male,5.2,3,4,5,2,Yes,9,4,3,Yes,Cardio,High
+32,Female,6,2.5,3,4,1,Yes,8,3,3,Yes,Yoga,High
+38,Male,5.8,3.5,4,5,2,Yes,9,4,4,Yes,Strength Training,High
+41,Female,6.1,3,3,4,1,Yes,8,3,2,Yes,Pilates,High
+36,Male,5.9,3.7,4,5,2,Yes,9,4,4,Yes,Cardio,High
+29,Female,6.4,3,2,4,1,Yes,8,3,3,Yes,Yoga,High
+50,Male,5.3,3.4,4,5,3,Yes,10,4,4,Yes,Strength Training,High
+33,Female,6.1,2.5,3,4,2,Yes,8,3,2,No,Meditation,High
+39,Male,5.7,3.8,4,5,2,Yes,9,4,4,Yes,Cardio,High
+28,Female,6.5,2.9,3,4,1,Yes,8,3,2,Yes,Yoga,High
+42,Male,5.6,4,4,5,3,Yes,10,4,3,Yes,Strength Training,High
+35,Female,6.3,3,2,3,2,No,8,3,3,Yes,Pilates,High
+48,Male,5.4,3.7,4,5,3,Yes,9,4,4,Yes,Cardio,High
+30,Female,6.4,3,2,4,1,No,8,3,2,Yes,Yoga,High
+44,Male,5.5,3.4,4,5,2,Yes,9,4,3,Yes,Strength Training,High
+37,Female,6.2,2.9,3,4,1,Yes,8,3,3,No,Pilates,High
+40,Male,5.8,4,4,5,3,Yes,9,4,4,Yes,Cardio,High
+31,Female,6.1,3.2,2,3,1,No,8,3,2,Yes,Yoga,High
+46,Male,5.3,3.8,4,5,3,Yes,10,4,3,Yes,Strength Training,High
+34,Female,6.4,3.5,3,4,2,No,8,3,3,Yes,Pilates,High
+45,Male,7.2,4,3,4,1,No,8,2,3,Yes,Cardio,Low
+32,Female,6.5,3,2,3,1,No,9,3,2,Yes,Yoga,Medium
+38,Male,5.8,3.7,3,5,2,Yes,9,4,3,Yes,Strength Training,High
+41,Female,6.8,4,3,3,1,No,8,2,2,No,Pilates,Low
+36,Male,6.1,3.2,4,5,2,Yes,8,3,4,Yes,Cardio,Medium
+29,Female,5.9,3.5,2,4,1,Yes,8,2,3,No,Yoga,Low
+50,Male,5.3,3.8,4,5,3,Yes,9,4,3,Yes,Strength Training,High
+33,Female,6.2,3,3,4,1,No,8,2,2,No,Meditation,Medium
+39,Male,6.3,3.5,4,4,2,Yes,8,3,4,Yes,Cardio,Medium
+28,Female,6.5,3,2,4,1,No,8,3,2,No,Yoga,Low
+42,Male,5.4,3.6,3,5,2,Yes,9,4,3,Yes,Strength Training,High
+35,Female,6.7,3,2,3,1,No,8,2,2,Yes,Pilates,Low
+48,Male,5.6,3.4,4,5,2,Yes,10,4,3,Yes,Cardio,High
+30,Female,6.1,3,2,3,1,No,8,2,2,No,Yoga,Medium
+44,Male,5.7,3.6,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+37,Female,6.4,3,3,3,1,No,8,3,2,No,Pilates,Medium
+40,Male,5.5,3.8,4,5,3,Yes,9,4,3,Yes,Cardio,High
+31,Female,6.3,3.1,2,3,1,No,8,2,3,Yes,Yoga,Low
+46,Male,5.8,3.5,3,5,2,Yes,10,4,3,Yes,Strength Training,High
+34,Female,6.2,3.2,2,4,1,No,8,3,3,Yes,Pilates,Medium
+45,Male,7.5,4.2,3,4,1,No,9,2,5,Yes,Cardio,Low
+36,Female,6.3,3.6,2,4,1,No,8,3,4,Yes,Yoga,Medium
+50,Male,6.2,3.9,3,5,2,Yes,8,4,3,Yes,Strength Training,High
+31,Female,6.8,3.3,2,3,1,No,8,3,3,No,Pilates,Low
+40,Male,5.9,3.7,3,5,2,Yes,9,4,4,Yes,Cardio,High
+28,Female,7,3.5,3,3,1,No,8,2,3,Yes,Yoga,Low
+38,Male,6.7,3.9,3,4,1,No,8,3,4,Yes,Strength Training,Medium
+44,Female,6.5,3.2,3,4,1,No,9,2,4,Yes,Meditation,Low
+35,Male,5.5,3.8,3,5,2,Yes,9,4,3,Yes,Cardio,High
+29,Female,6.9,3.1,3,3,1,No,8,3,2,Yes,Yoga,Medium
+46,Male,6,3.5,4,5,3,Yes,10,4,4,Yes,Strength Training,High
+34,Female,6.3,3.4,3,3,1,No,8,3,2,No,Pilates,Low
+39,Male,5.8,3.7,3,4,2,Yes,9,4,3,Yes,Cardio,Medium
+30,Female,7.1,3.3,2,3,1,No,8,2,2,Yes,Yoga,Low
+43,Male,5.6,3.9,4,5,3,Yes,9,4,3,Yes,Strength Training,High
+36,Female,6.7,3.2,3,3,1,No,8,2,3,No,Meditation,Medium
+41,Male,5.4,3.6,4,5,3,Yes,9,4,3,Yes,Cardio,High
+33,Female,6.5,3.4,2,3,1,No,8,3,2,No,Yoga,Low
+50,Male,6.1,3.5,4,5,2,Yes,9,4,4,Yes,Strength Training,High
+32,Female,6.8,3.2,3,3,1,No,8,2,3,Yes,Meditation,Medium
+37,Male,6.2,3.8,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+29,Female,6.9,3.3,2,3,1,No,7,3,3,No,Yoga,Low
+43,Male,5.7,4.1,4,5,3,Yes,9,4,5,Yes,Strength Training,High
+34,Female,6.8,3.2,3,3,1,No,7,3,3,No,Meditation,Medium
+40,Male,5.5,4,4,5,2,Yes,9,4,4,Yes,Cardio,High
+27,Female,6.9,3.5,2,3,1,No,8,2,3,No,Yoga,Low
+50,Male,5.4,4.2,4,5,3,Yes,10,4,5,Yes,Strength Training,High
+32,Female,6.7,3.1,3,3,1,No,7,3,3,Yes,Meditation,Low
+38,Male,6,3.7,3,4,2,Yes,8,4,4,Yes,Cardio,Medium
+30,Female,7,3.4,2,3,1,No,8,3,2,No,Yoga,Low
+49,Male,5.3,4.1,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+33,Female,6.8,3.2,2,3,1,No,7,3,3,Yes,Meditation,Medium
+41,Male,6,3.6,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+28,Female,6.9,3,3,3,1,No,8,2,3,No,Yoga,Low
+45,Male,5.8,3.8,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+35,Female,6.5,3.4,2,3,1,No,7,3,3,No,Meditation,Medium
+50,Male,5.6,4.1,4,5,2,Yes,10,4,5,Yes,Strength Training,High
+34,Female,6.9,3.2,3,3,1,No,7,3,2,Yes,Meditation,Medium
+43,Male,6,3.6,3,4,2,No,8,4,3,Yes,Cardio,Medium
+39,Female,6.5,3.5,2,3,1,No,8,2,3,No,Yoga,Low
+37,Male,6.3,3.7,4,4,2,Yes,9,4,3,Yes,Strength Training,High
+28,Female,6.9,3.1,3,3,1,No,8,2,3,No,Yoga,Low
+50,Male,5.8,3.9,4,5,3,Yes,9,4,5,Yes,Cardio,High
+30,Female,6.8,3.2,3,3,1,No,8,2,2,No,Meditation,Medium
+42,Male,5.9,3.8,4,5,3,Yes,10,4,4,Yes,Strength Training,High
+36,Female,6.8,3.3,2,3,1,No,8,2,2,Yes,Yoga,Low
+48,Male,5.5,3.9,4,5,3,Yes,10,4,4,Yes,Cardio,High
+29,Female,6.9,3.1,3,3,1,No,7,3,3,No,Meditation,Medium
+34,Male,5.8,4,4,5,3,Yes,8,4,4,Yes,Cardio,High
+28,Female,7.2,3.2,2,3,1,No,7,3,2,No,Meditation,Medium
+40,Male,6.5,3.6,3,4,2,Yes,9,4,3,Yes,Strength Training,Medium
+45,Female,6,3.9,3,3,2,No,7,3,2,Yes,Yoga,Low
+31,Male,6.8,3.3,4,5,3,Yes,9,4,4,Yes,Cardio,High
+39,Female,7,3.1,3,3,2,No,7,3,2,Yes,Meditation,Medium
+33,Male,5.9,4.1,5,6,3,Yes,9,4,5,Yes,Strength Training,High
+41,Female,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,Medium
+37,Male,6.7,3.4,3,3,2,No,8,2,2,No,Yoga,Low
+42,Female,6.3,3.9,3,4,2,Yes,7,3,3,Yes,Strength Training,Medium
+27,Male,5.8,4,4,5,3,Yes,9,4,4,Yes,Cardio,High
+50,Female,6,3.7,4,5,3,Yes,9,4,4,Yes,Strength Training,Medium
+38,Male,6.6,3.2,2,3,2,No,8,3,2,No,Meditation,Low
+34,Female,6.8,3.5,3,4,2,Yes,7,3,3,Yes,Cardio,Medium
+29,Male,5.7,4.3,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+44,Female,6,3.8,3,3,2,No,7,3,2,Yes,Meditation,Low
+50,Male,6.5,3.1,3,4,2,No,8,3,2,Yes,Yoga,Medium
+32,Female,5.8,4.2,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+36,Male,6.2,3.9,3,4,2,Yes,7,3,3,No,Cardio,Medium
+39,Female,6,3.6,3,4,2,No,8,3,3,Yes,Strength Training,Medium
+28,Male,6.7,3.3,3,3,2,No,8,3,2,No,Meditation,Low
+33,Female,6.5,3.4,3,3,2,Yes,7,3,3,Yes,Cardio,Medium
+46,Male,5.6,4.1,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+52,Female,5.5,4.2,5,6,3,Yes,10,4,5,Yes,Cardio,High
+30,Male,6.9,3,3,3,1,No,8,3,2,No,Yoga,Low
+44,Female,6.4,3.7,3,3,2,Yes,7,3,3,Yes,Strength Training,Medium
+55,Male,6,3.5,4,5,3,Yes,9,4,4,Yes,Cardio,High
+29,Female,7.2,3.5,2,3,1,No,7,3,2,No,Yoga,Low
+35,Male,6,3.8,4,5,3,Yes,8,4,4,Yes,Cardio,Medium
+45,Female,6.8,3.6,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+38,Male,5.9,4.2,4,5,3,No,8,4,3,Yes,Cardio,Medium
+52,Female,6.7,3.9,5,6,4,Yes,9,5,5,Yes,Strength Training,High
+34,Male,7.3,3.2,2,3,1,No,7,3,2,No,Yoga,Low
+40,Female,6.3,3.4,3,3,2,Yes,8,4,3,Yes,Strength Training,Medium
+30,Male,7.1,3,2,3,1,No,7,3,2,No,Cardio,Low
+50,Female,6,3.8,3,3,2,No,8,4,3,Yes,Meditation,Medium
+41,Male,5.8,4.1,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+37,Female,6.4,3.3,2,3,2,No,7,3,2,No,Cardio,Low
+42,Male,6.6,3.7,3,4,2,Yes,8,4,3,Yes,Strength Training,Medium
+46,Female,6.8,3.5,2,3,2,No,7,3,2,Yes,Yoga,Medium
+55,Male,5.6,4.3,5,6,4,Yes,9,5,4,Yes,Cardio,High
+30,Female,7.5,3,2,3,1,No,7,3,2,No,Meditation,Low
+39,Male,5.7,4.2,4,5,3,Yes,8,4,3,Yes,Strength Training,Medium
+48,Female,6.3,3.6,3,4,2,Yes,7,3,3,Yes,Cardio,Medium
+51,Male,6.9,3.4,2,3,1,No,7,3,2,No,Strength Training,Medium
+29,Female,6.4,3.1,2,3,1,No,7,3,2,No,Meditation,Low
+41,Male,7.1,3.2,3,4,2,Yes,8,4,3,Yes,Strength Training,High
+36,Female,5.8,4,4,5,3,Yes,9,5,4,Yes,Cardio,High
+32,Male,6.7,3.3,2,3,2,No,8,3,2,No,Meditation,Low
+43,Female,6.2,3.5,3,4,2,Yes,7,3,3,Yes,Strength Training,Medium
+47,Male,6,4.1,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+38,Female,6.3,3.9,4,5,3,Yes,9,4,4,Yes,Strength Training,High
+27,Female,6.8,3.4,3,4,2,Yes,8,4,3,Yes,Yoga,Medium
+41,Male,6,3.8,4,5,3,No,8,4,3,No,Cardio,High
+33,Female,7.2,3.1,2,3,1,No,7,3,2,No,Strength Training,Low
+37,Male,5.8,4.2,4,5,3,Yes,9,5,4,Yes,Yoga,Medium
+50,Female,6.5,3.7,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+45,Male,5.7,4,4,5,3,Yes,8,5,4,Yes,Strength Training,High
+32,Female,6.3,3.9,3,4,2,No,8,4,3,No,Cardio,Medium
+29,Male,6.7,3.5,2,3,1,Yes,7,3,2,No,Yoga,Low
+43,Female,6.9,3.3,2,3,1,Yes,7,3,2,Yes,Strength Training,Medium
+50,Male,6,3.8,4,5,3,No,8,4,3,Yes,Cardio,High
+55,Female,6.3,3.7,3,4,2,Yes,9,4,4,Yes,Strength Training,High
+28,Male,7.1,3.2,2,3,1,No,7,3,2,No,Cardio,Low
+39,Female,6.8,3.4,3,4,2,Yes,8,4,3,Yes,Yoga,Medium
+47,Male,5.9,4.1,4,5,3,No,9,5,4,Yes,Strength Training,High
+31,Female,6.5,3.6,2,3,1,Yes,7,3,2,No,Cardio,Medium
+42,Male,6.4,3.8,4,5,3,No,8,4,3,Yes,Yoga,Medium
+33,Female,7,3.3,2,3,1,Yes,7,3,2,No,Strength Training,Low
+44,Male,6.2,4,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+37,Female,6.1,3.9,3,4,2,Yes,8,4,3,Yes,Yoga,Low
+40,Male,6.6,3.2,2,3,1,No,7,3,2,No,Strength Training,Medium
+52,Female,5.8,4.3,4,5,3,Yes,9,5,4,Yes,Yoga,High
+38,Male,5.9,4,4,5,3,No,8,4,3,Yes,Cardio,High
+36,Female,6.2,3.8,2,3,1,Yes,7,3,2,No,Strength Training,Medium
+29,Male,6.4,3.7,3,4,2,Yes,8,4,3,Yes,Yoga,Low
+46,Female,6.3,3.9,3,4,2,No,8,4,3,No,Cardio,Medium
+55,Male,6,4.2,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+34,Female,6.5,3.4,3,4,2,Yes,8,4,3,No,Cardio,Medium
+29,Male,7,3.2,2,3,1,No,7,3,2,No,Strength Training,Low
+42,Female,6.3,3.8,3,4,2,Yes,8,4,3,Yes,Yoga,Medium
+50,Male,5.8,4,4,5,3,No,9,5,4,Yes,Cardio,High
+31,Female,6.8,3.3,3,4,2,No,8,4,3,No,Strength Training,Medium
+39,Male,6.5,3.7,4,5,3,Yes,9,5,4,Yes,Yoga,High
+45,Female,6,3.9,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+29,Male,7.2,3.2,2,3,1,No,7,3,2,No,Strength Training,Low
+52,Female,5.9,4.1,4,5,3,Yes,9,5,4,Yes,Cardio,High
+40,Male,6.3,3.9,3,4,2,No,8,4,3,Yes,Strength Training,Medium
+33,Female,6.5,3.6,2,3,1,Yes,7,3,2,No,Yoga,Low
+36,Male,6.2,3.8,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+48,Female,5.9,4.2,4,5,3,No,9,5,4,Yes,Strength Training,High
+41,Male,6.4,3.7,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+54,Female,6.1,4,3,4,2,No,8,4,3,No,Yoga,High
+30,Male,6.3,3.5,2,3,1,No,7,3,2,No,Strength Training,Low
+35,Female,7,3.4,2,3,1,Yes,7,3,2,No,Yoga,Medium
+44,Male,5.8,4,4,5,3,Yes,9,5,4,Yes,Cardio,High
+33,Female,6.2,3.8,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+50,Male,6.6,3.9,4,5,3,Yes,9,5,4,Yes,Yoga,High
+32,Female,7,3.3,2,3,1,No,7,3,2,No,Strength Training,Low
+34,Female,6.4,3.6,3,4,2,Yes,8,4,3,No,Cardio,Medium
+29,Male,7.2,3.2,2,3,1,No,7,3,2,No,Strength Training,Low
+41,Female,6.1,3.9,3,4,2,Yes,8,4,3,Yes,Yoga,Medium
+50,Male,5.7,4.3,4,5,3,Yes,9,5,4,Yes,Cardio,High
+36,Female,6.3,3.8,3,4,2,No,8,4,3,No,Strength Training,Medium
+47,Male,6.2,3.7,4,5,3,Yes,9,5,4,Yes,Yoga,High
+29,Female,6.8,3.4,2,3,1,No,7,3,2,No,Strength Training,Low
+44,Male,5.6,4.1,4,5,3,Yes,9,5,4,Yes,Cardio,High
+33,Female,6.2,3.9,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+53,Male,5.5,4.3,4,5,3,Yes,9,5,4,Yes,Yoga,High
+38,Female,6,3.8,3,4,2,No,8,4,3,No,Strength Training,Medium
+40,Male,6.3,4,3,4,2,Yes,8,4,3,Yes,Cardio,High
+46,Female,5.8,4.2,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+32,Male,7,3.5,2,3,1,No,7,3,2,No,Yoga,Low
+36,Female,6.6,3.6,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+44,Male,6,4.1,4,5,3,Yes,9,5,4,Yes,Cardio,High
+39,Female,6.2,3.7,3,4,2,No,8,4,3,No,Yoga,Medium
+49,Male,5.6,4.3,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+31,Female,6.7,3.3,3,4,2,Yes,8,4,3,No,Cardio,Medium
+45,Male,5.9,4,4,5,3,No,9,5,4,Yes,Yoga,High
+37,Female,6.4,3.9,3,4,2,Yes,8,4,3,Yes,Strength Training,Medium
+55,Male,5.8,4.2,4,5,3,No,9,5,4,Yes,Cardio,High
+28,Female,6,3.5,3,4,2,No,7,3,2,No,Strength Training,Low
+40,Male,6.3,3.8,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+38,Male,5.9,4.2,3,4,2,Yes,8,4,3,Yes,Cardio,High
+42,Female,6,4.1,4,5,3,No,9,5,4,Yes,Strength Training,High
+28,Male,7.1,3.7,2,3,1,No,7,3,2,No,Yoga,Low
+51,Female,6.5,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+37,Male,6,3.9,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+45,Female,6.4,3.8,3,4,2,No,8,4,3,No,Yoga,Medium
+33,Male,6.3,3.8,3,4,2,Yes,7,3,2,No,Cardio,Medium
+48,Female,6.2,4.1,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+36,Male,6,3.9,4,5,3,No,8,4,3,Yes,Cardio,High
+27,Female,7.2,3.6,2,3,1,No,7,3,2,No,Yoga,Low
+53,Male,5.8,4.2,4,5,3,Yes,9,5,4,Yes,Cardio,High
+39,Female,6.6,3.9,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+47,Male,5.7,4,4,5,3,No,9,5,4,Yes,Yoga,High
+32,Female,6.1,3.8,3,4,2,Yes,8,4,3,No,Cardio,Medium
+43,Male,5.9,4.1,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+30,Female,6.4,3.8,3,4,2,No,7,3,2,No,Yoga,Low
+52,Male,5.8,4,4,5,3,No,9,5,4,Yes,Cardio,High
+41,Female,6,4.1,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+38,Male,6.3,3.9,3,4,2,No,8,4,3,No,Yoga,Medium
+50,Female,5.7,4.2,4,5,3,Yes,9,5,4,Yes,Cardio,High
+28,Male,7.1,3.6,2,3,1,No,7,3,2,No,Yoga,Low
+34,Female,6.2,4,3,4,2,Yes,8,4,3,Yes,Strength Training,Medium
+46,Male,5.6,4.1,4,5,3,Yes,9,5,4,Yes,Cardio,High
+36,Female,6.3,3.8,3,4,2,Yes,8,4,3,No,Strength Training,Medium
+40,Female,6,4.2,3,4,2,No,8,4,3,No,Yoga,High
+35,Male,5.9,4,3,4,2,Yes,8,4,3,Yes,Cardio,High
+29,Female,7.1,3.7,2,3,1,No,7,3,2,No,Strength Training,Low
+52,Male,6.3,4.1,4,5,3,Yes,9,5,4,Yes,Cardio,High
+44,Female,6.2,4,3,4,2,Yes,8,4,3,No,Yoga,Medium
+30,Male,6.4,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+47,Female,6.1,4,4,5,3,No,8,4,3,No,Yoga,High
+33,Male,6.2,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Medium
+41,Female,6.5,4.3,3,4,2,No,8,4,3,Yes,Yoga,Medium
+38,Male,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+30,Female,7,3.7,2,3,1,No,7,3,2,No,Strength Training,Low
+50,Male,6,4.2,4,5,3,Yes,9,5,4,Yes,Cardio,High
+42,Female,6.3,4.1,3,4,2,No,8,4,3,No,Yoga,Medium
+35,Male,5.8,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+36,Female,6,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+49,Male,6.4,4.2,4,5,3,Yes,9,5,4,Yes,Cardio,High
+31,Female,6.5,3.8,3,4,2,Yes,7,3,2,No,Yoga,Medium
+53,Male,5.9,4.1,4,5,3,Yes,8,4,3,Yes,Cardio,High
+32,Female,6.1,3.9,3,4,2,No,7,3,2,No,Strength Training,Low
+45,Male,5.8,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+37,Female,6.4,4.1,3,4,2,No,8,4,3,Yes,Strength Training,Medium
+44,Male,6.3,4,3,4,2,Yes,7,3,2,Yes,Cardio,High
+34,Female,6.2,3.8,3,4,2,No,7,3,2,No,Yoga,Low
+52,Male,6.2,4.1,3,4,2,Yes,8,4,3,Yes,Strength Training,High
+34,Female,6,3.8,4,5,3,No,7,3,2,No,Yoga,Medium
+41,Male,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+37,Female,6.1,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+45,Male,6.4,4.2,4,5,3,Yes,9,5,4,Yes,Yoga,High
+33,Female,6,3.7,3,4,2,Yes,7,3,2,No,Cardio,Medium
+39,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+48,Female,6.2,3.8,3,4,2,No,8,4,3,No,Yoga,Medium
+53,Male,5.8,4.3,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+32,Female,6.1,4,3,4,2,No,7,3,2,No,Cardio,Medium
+41,Male,6.3,4,3,4,2,Yes,7,3,2,Yes,Strength Training,Low
+50,Female,6.4,4.1,4,5,3,No,8,4,3,No,Yoga,Medium
+36,Male,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+40,Female,6,3.7,3,4,2,Yes,7,3,2,No,Cardio,Medium
+44,Male,6.3,4.2,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+38,Female,6.2,4,3,4,2,No,7,3,2,No,Yoga,Medium
+34,Male,6,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Low
+55,Female,6.3,4.2,3,4,2,No,8,4,3,No,Cardio,Medium
+42,Male,6.1,3.9,4,5,3,Yes,7,3,2,Yes,Strength Training,High
+47,Female,6.2,4,3,4,2,No,7,3,2,No,Yoga,Medium
+49,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Cardio,High
+35,Female,6,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Medium
+43,Male,6.2,4,3,4,2,Yes,7,3,2,Yes,Yoga,Low
+30,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Yoga,Medium
+38,Male,6,3.7,4,5,3,Yes,8,4,3,Yes,Cardio,High
+25,Female,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+50,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Yoga,High
+45,Female,6.1,3.8,3,4,2,No,7,3,2,No,Cardio,Medium
+33,Male,6,3.7,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+29,Female,6.2,3.9,3,4,2,No,7,3,2,No,Yoga,Medium
+40,Male,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+42,Female,6.1,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Medium
+37,Male,6,3.7,4,5,3,No,8,4,3,Yes,Cardio,High
+31,Female,6.2,3.9,3,4,2,No,7,3,2,No,Yoga,Medium
+48,Male,6,3.6,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+43,Female,6.3,4,3,4,2,Yes,7,3,2,No,Cardio,Medium
+36,Male,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+54,Female,6.1,3.7,3,4,2,No,7,3,2,No,Yoga,Medium
+39,Male,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+28,Female,6,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+41,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Yoga,Low
+45,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+33,Male,6,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+49,Female,6.1,3.7,4,5,3,Yes,8,4,3,Yes,Yoga,High
+38,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Cardio,High
+46,Male,6.3,3.8,3,4,2,Yes,8,4,3,No,Strength Training,High
+39,Female,6.4,4.2,4,5,3,Yes,9,5,4,Yes,Yoga,High
+42,Male,6,3.7,3,4,2,No,8,4,3,No,Cardio,Medium
+47,Female,6.2,4.1,4,5,3,Yes,9,5,4,Yes,Strength Training,High
+53,Male,5.9,4.3,4,5,3,No,7,3,2,No,Yoga,Medium
+35,Female,6.1,3.9,3,4,2,Yes,8,4,3,No,Cardio,High
+39,Male,6.4,4,3,4,2,Yes,7,3,2,No,Strength Training,Medium
+51,Female,6.2,4.1,4,5,3,No,8,4,3,No,Yoga,Low
+45,Male,6,3.8,3,4,2,Yes,7,3,2,No,Cardio,Medium
+44,Female,6.1,3.9,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+50,Male,6.3,4,3,4,2,No,9,5,4,Yes,Cardio,Low
+38,Female,6,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Medium
+41,Male,6.4,4.2,4,5,3,No,8,4,3,No,Yoga,High
+37,Female,6.3,4.1,3,4,2,Yes,8,4,3,Yes,Cardio,Medium
+34,Male,6.2,3.8,3,4,2,Yes,7,3,2,No,Strength Training,Low
+33,Female,6.1,3.9,3,4,2,No,7,3,2,No,Yoga,Medium
+40,Male,6,3.7,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+52,Female,6.3,4.1,3,4,2,No,8,4,3,No,Cardio,Low
+55,Male,6.2,4,4,5,3,Yes,8,4,3,Yes,Yoga,Medium
+33,Female,6.1,3.9,3,4,2,Yes,7,3,2,No,Strength Training,Low
+49,Male,6.2,4.2,4,5,3,No,9,5,4,Yes,Cardio,Medium
+36,Female,6.4,4.1,3,4,2,Yes,8,4,3,Yes,Strength Training,High
+35,Female,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Yoga,Medium
+50,Male,6,3.6,3,4,2,No,7,3,2,No,Strength Training,High
+43,Female,6.1,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+32,Male,6.2,3.7,3,4,2,No,7,3,2,No,Yoga,Medium
+39,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+46,Male,6,3.6,3,4,2,No,7,3,2,No,Cardio,Medium
+27,Female,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+54,Male,6.1,3.7,3,4,2,No,7,3,2,No,Yoga,Medium
+40,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+29,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+44,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+31,Male,6.2,3.8,3,4,2,No,7,3,2,No,Cardio,Medium
+41,Female,6.1,3.6,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+55,Male,6.2,3.8,3,4,2,No,7,3,2,No,Yoga,Medium
+37,Female,6,3.7,4,5,3,Yes,8,4,3,Yes,Cardio,High
+34,Male,6.3,4.1,3,4,2,No,7,3,2,No,Strength Training,Medium
+52,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+29,Male,6,3.6,3,4,2,No,7,3,2,No,Cardio,Medium
+47,Female,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+42,Male,6.3,4,3,4,2,No,7,3,2,No,Yoga,Medium
+38,Female,6.1,3.7,4,5,3,Yes,8,4,3,Yes,Cardio,High
+33,Male,6,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+44,Male,6.1,3.7,3,4,2,No,7,3,2,No,Cardio,Medium
+33,Female,6.3,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+50,Male,6,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+39,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+28,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+52,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+43,Male,6.2,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+30,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+47,Male,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+35,Female,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Yoga,High
+38,Male,6,3.6,3,4,2,No,7,3,2,No,Strength Training,Medium
+45,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+32,Male,6.2,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+36,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+41,Male,6.1,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+29,Female,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+53,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+34,Female,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Yoga,High
+42,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+30,Female,6,3.7,4,5,3,Yes,8,4,3,Yes,Cardio,High
+46,Male,6.3,4,3,4,2,No,7,3,2,No,Strength Training,Medium
+38,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Yoga,High
+29,Male,6.2,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+32,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+54,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+40,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+27,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+36,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+42,Male,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+50,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+33,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+39,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Cardio,High
+41,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+32,Female,6.2,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+46,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+37,Female,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Cardio,High
+55,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+48,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+31,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+49,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+53,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+34,Female,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+30,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+52,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+45,Male,6.2,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+29,Female,6.1,3.7,3,4,2,No,7,3,2,No,Cardio,Low
+38,Male,6.3,4.1,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+32,Female,6,3.7,3,4,2,No,7,3,2,No,Yoga,Medium
+41,Male,6.2,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+35,Female,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+48,Male,6,3.7,4,5,3,Yes,8,4,3,Yes,Yoga,High
+29,Female,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+40,Male,6.1,3.7,3,4,2,No,7,3,2,No,Cardio,High
+34,Female,6.3,4,4,5,3,Yes,8,4,3,Yes,Yoga,Medium
+42,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Low
+33,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+39,Male,6.2,3.8,3,4,2,No,7,3,2,No,Yoga,Medium
+50,Female,6,3.7,3,4,2,No,7,3,2,No,Strength Training,High
+30,Male,6.2,4,3,4,2,No,7,3,2,No,Cardio,Medium
+46,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Yoga,High
+40,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Medium
+28,Female,6.3,3.9,4,5,3,Yes,8,4,3,Yes,Yoga,High
+45,Male,6.1,3.8,3,4,2,No,7,3,2,No,Strength Training,Medium
+38,Female,6.2,4,4,5,3,Yes,8,4,3,Yes,Cardio,High
+32,Male,6.3,4,3,4,2,No,7,3,2,No,Strength Training,Medium
+29,Female,6,3.7,4,5,3,Yes,8,4,3,Yes,Yoga,High
+36,Male,6.3,4.1,4,5,3,Yes,7,3,2,Yes,Cardio,High
+45,Female,6.2,3.9,3,4,2,No,8,3,2,No,Strength Training,Medium
+34,Male,6.1,4,3,4,2,No,7,3,2,No,Cardio,High
+30,Female,6.3,4.2,4,5,3,Yes,8,4,3,Yes,Yoga,Low
+39,Male,6,3.8,4,5,3,Yes,7,3,2,Yes,Cardio,Medium
+32,Female,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,High
+48,Male,6.1,4,4,5,3,Yes,8,4,3,Yes,Yoga,High
+41,Female,6,3.8,3,4,2,No,7,3,2,No,Cardio,Medium
+35,Male,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Strength Training,Low
+29,Female,6.3,4.2,3,4,2,No,7,3,2,No,Yoga,Medium
+50,Male,6,3.7,4,5,3,Yes,7,3,2,Yes,Strength Training,High
+36,Female,6.2,4,3,4,2,No,8,3,2,No,Cardio,Low
+43,Male,6.3,4.1,3,4,2,No,7,3,2,No,Yoga,High
+32,Female,6.1,3.8,4,5,3,Yes,7,3,2,Yes,Cardio,Medium
+40,Male,6,3.7,4,5,3,Yes,8,4,3,Yes,Yoga,High
+30,Female,6.3,4,3,4,2,No,7,3,2,No,Strength Training,Medium
+47,Male,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,Low
+31,Female,6,3.7,3,4,2,No,7,3,2,No,Yoga,Medium
+38,Male,6.2,3.9,4,5,3,Yes,8,4,3,Yes,Strength Training,High
+33,Female,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,Low
+44,Male,6,3.7,4,5,3,Yes,7,3,2,Yes,Yoga,High
+29,Female,6.2,4.1,3,4,2,No,7,3,2,No,Strength Training,Medium
+36,Male,6.1,3.8,4,5,3,Yes,8,4,3,Yes,Cardio,High
+40,Female,6.3,4,3,4,2,No,7,3,2,No,Yoga,Medium
+42,Male,6,3.7,3,4,2,No,7,3,2,No,Strength Training,Low
+30,Female,6.1,3.8,4,5,3,Yes,7,3,2,Yes,Cardio,High
+34,Male,6.2,3.9,3,4,2,No,7,3,2,No,Strength Training,Medium
+29,Female,6.3,4.2,4,5,3,Yes,8,4,3,Yes,Yoga,High
+33,Female,7,4,3,3,2,No,8,1.5,4,Yes,Cardio,Medium
+42,Female,7,4,3,4,1,No,9,2,4,No,Pilates,High
+43,Male,7.5,5,3,4,1,No,10,1.5,5,Yes,Cardio,Low
+44,Female,6.5,4,4,5,2,No,8,2,3,No,Strength Training,Medium
+45,Male,7,4,3,4,1,Yes,9,1.5,4,Yes,Yoga,High
+46,Female,8,5,3,4,2,No,10,2,5,No,Pilates,Low
+47,Male,6,3,4,5,1,Yes,8,2.5,4,Yes,Strength Training,Medium
+48,Female,7,4,2,3,1,Yes,9,1.5,3,No,Cardio,High
+49,Male,8,5,3,4,2,No,10,2,4,Yes,Yoga,Low
+50,Female,6.5,4,3,4,1,Yes,9,2,5,Yes,Pilates,Medium
+18,Male,7,4,2,3,1,No,8,1.5,3,Yes,Strength Training,Low
+19,Female,8,5,3,4,1,No,9,2,4,Yes,Yoga,Medium
+20,Male,7,4,3,4,2,Yes,10,2,4,No,Pilates,High
+21,Female,6,3,4,5,1,Yes,9,2,5,Yes,Cardio,Medium
+22,Male,7,5,3,4,1,No,8,2,4,No,Strength Training,High
+23,Female,8,5,3,4,2,Yes,9,2.5,5,Yes,Yoga,Medium
+24,Male,6,3,4,5,1,Yes,9,1.5,4,No,Pilates,Low
+25,Female,7,4,2,3,1,No,8,2,4,Yes,Strength Training,High
+26,Male,7,4,3,4,2,No,9,2,4,Yes,Yoga,Medium
+27,Female,8,5,2,3,1,Yes,9,2,5,No,Cardio,High
+28,Male,7,4,3,4,1,No,8,1.5,4,Yes,Pilates,Low
+29,Female,6,3,3,4,2,Yes,10,2,5,No,Strength Training,Medium
+30,Male,7,5,3,4,1,No,9,1.5,4,Yes,Cardio,High
+31,Female,7,4,2,3,1,Yes,8,1.5,3,No,Pilates,Low
+32,Male,8,5,3,4,1,No,9,2,4,Yes,Strength Training,Medium
+33,Female,6,4,3,4,2,No,8,2,4,Yes,Yoga,High
+34,Male,7,4,3,4,1,Yes,9,2,4,No,Pilates,Low
+35,Female,6,3,4,5,1,Yes,8,2.5,5,Yes,Cardio,Medium
+36,Male,7,5,2,3,1,No,9,1.5,4,Yes,Strength Training,High
+37,Female,7,4,3,4,2,No,8,2,5,No,Yoga,Low
+38,Male,8,5,3,4,1,Yes,10,2,5,Yes,Pilates,Medium
+39,Female,7,4,3,4,1,No,9,1.5,4,Yes,Cardio,High
+40,Male,6,3,3,4,2,No,9,2,4,No,Strength Training,Medium
+41,Female,8,5,3,4,1,Yes,10,2,5,Yes,Yoga,High
+42,Male,7,4,2,3,1,No,8,2,4,No,Pilates,Medium
+43,Female,7,5,3,4,2,Yes,9,1.5,5,Yes,Strength Training,Low
+44,Male,7,4,3,4,1,No,8,2,4,No,Cardio,High
+45,Female,6,3,3,4,1,Yes,9,1.5,4,Yes,Pilates,Medium
+46,Male,6,4,3,4,1,Yes,8,2,5,No,Strength Training,Low
+47,Female,7,5,2,3,1,No,9,1.5,4,Yes,Cardio,Medium
+48,Male,8,4,3,5,2,Yes,9,2,5,Yes,Pilates,High
+49,Female,7,4,2,3,1,No,8,2,4,No,Strength Training,Medium
+50,Male,6,3,3,4,2,Yes,8,2,5,Yes,Yoga,High
+51,Female,7,5,3,4,2,Yes,9,2,4,No,Cardio,Low
+52,Male,8,4,2,3,1,No,9,2,5,Yes,Pilates,Medium
+53,Female,7,4,3,5,1,Yes,8,2,4,Yes,Yoga,High
+54,Male,6,3,3,4,2,No,9,2,4,No,Cardio,Low
+55,Female,7,5,4,5,1,Yes,9,1.5,5,Yes,Strength Training,Medium
+32,Female,7,4,2,4,1,No,8,2,4,Yes,Cardio,Medium
+45,Male,6,3,3,4,2,Yes,11,2,3,No,Pilates,High
+39,Female,8,5,3,3,1,No,9,1.5,4,Yes,Strength Training,Low
+41,Male,7,4,2,3,1,No,10,2,3,Yes,Yoga,Medium
+35,Female,6.5,3,2.5,4,1,Yes,8,1.5,4,No,Strength Training,High
+43,Male,7,4,3,5,2,No,9,2,4,Yes,Cardio,Low
+36,Female,7,4,2,3,1,Yes,9,1.5,4,Yes,Pilates,Medium
+50,Male,7,5,2.5,3,1,No,10,2,3,Yes,Strength Training,High
+44,Female,6,3,3,4,2,Yes,9,2,4,No,Yoga,Medium
+40,Male,6.5,4,4,5,1,No,11,2,3,Yes,Pilates,Low
+47,Female,7.5,4,2,3,1,No,8,1.5,4,Yes,Cardio,High
+34,Male,7,3,3,4,2,Yes,10,2,4,No,Strength Training,Medium
+39,Female,8,5,2,3,1,No,9,1.5,4,Yes,Pilates,Low
+46,Male,7,4,2.5,4,1,No,8,1.5,3,Yes,Cardio,Medium
+32,Female,6.5,3,3,4,1,Yes,9,2,4,No,Strength Training,High
+37,Male,7,5,3,4,2,No,9,2,4,Yes,Yoga,Low
+42,Female,7,4,2.5,4,1,Yes,8,1.5,3,No,Pilates,Medium
+45,Male,6.5,4,2,3,2,No,10,2,4,Yes,Strength Training,High
+34,Female,7,3,3,5,1,Yes,9,1.5,4,No,Yoga,Medium
+49,Male,7,4,3,5,1,No,10,2,3,Yes,Pilates,High
+44,Female,7,5,3,4,2,Yes,9,2,4,Yes,Cardio,Medium
+38,Male,7,4,3,3,1,Yes,9,2,4,Yes,Strength Training,Low
+35,Female,7.5,5,2,3,1,No,9,2,3,Yes,Yoga,High
+40,Male,7,4,3,4,2,Yes,8,1.5,4,No,Pilates,Medium
+33,Male,6,4,3,3,2,No,8,2,4,Yes,Strength Training,Medium
+42,Female,7,5,2,4,1,Yes,9,2,3,No,Yoga,High
+48,Male,7,4,3,4,1,No,10,2,3,Yes,Pilates,Low
+36,Female,7,3,2,3,1,No,8,1.5,4,Yes,Cardio,Medium
+39,Male,7,4,3,4,2,Yes,10,2,3,No,Strength Training,High
+50,Female,6,5,2,3,1,Yes,9,2,4,Yes,Pilates,Low
+34,Male,7,3,3,5,1,No,8,1.5,4,Yes,Cardio,Medium
+41,Female,6,4,2,3,1,Yes,9,2,3,No,Strength Training,High
+47,Male,7.5,5,3,4,2,No,10,2,4,Yes,Yoga,Low
+39,Female,6.5,4,2,3,1,Yes,8,2,3,Yes,Pilates,Medium
+45,Male,7,3,3,4,1,No,10,2,4,No,Strength Training,High
+38,Female,7,4,2,4,1,No,9,2,4,Yes,Yoga,Low
+36,Male,6.5,4,3,5,1,Yes,8,1.5,4,No,Strength Training,Medium
+44,Female,6,3,3,4,1,No,9,2,3,Yes,Pilates,High
+49,Male,7,5,2,3,1,Yes,10,2,4,No,Yoga,Low
+37,Female,7,4,3,5,1,No,9,2,3,Yes,Cardio,Medium
+41,Male,7,5,2,3,1,Yes,9,2,4,No,Strength Training,High
+46,Female,7,4,3,5,2,Yes,10,2,4,Yes,Pilates,Low
+38,Male,7,3,2,3,1,No,9,1.5,4,Yes,Cardio,Medium
+40,Female,7,4,3,4,2,Yes,9,2,3,No,Strength Training,High
+48,Male,7,5,3,4,1,No,10,2,4,Yes,Yoga,Low
+35,Female,6,4,3,4,2,Yes,9,1.5,4,Yes,Pilates,Medium
+43,Male,7,3,3,4,1,No,10,2,3,Yes,Strength Training,High
+34,Male,6,4,2,3,1,No,8,2,4,Yes,Yoga,Medium
+40,Female,7,4,3,4,1,Yes,9,2,3,No,Strength Training,High
+45,Male,7,5,2,3,1,Yes,10,2,4,Yes,Pilates,Low
+36,Female,6,4,3,4,1,No,9,2,3,Yes,Cardio,Medium
+42,Male,7,4,2,4,1,No,8,2,4,No,Strength Training,High
+48,Female,6,3,3,5,1,Yes,9,2,4,Yes,Pilates,Low
+39,Male,7,4,2,3,1,Yes,10,2,3,No,Yoga,Medium
+41,Female,6.5,4,2,3,1,No,9,1.5,4,Yes,Strength Training,High
+47,Male,7,4,3,4,2,Yes,8,2,4,No,Pilates,Low
+38,Female,6,3,2,3,1,No,9,2,3,Yes,Cardio,Medium
+43,Male,7,5,3,4,2,Yes,9,2,4,No,Strength Training,High
+46,Female,6.5,3,3,5,1,Yes,8,2,3,Yes,Pilates,Low
+38,Male,7,4,2,4,1,No,10,2,4,Yes,Cardio,Medium
+44,Female,6.5,4,3,5,1,No,9,2,4,Yes,Strength Training,High
+49,Male,7,3,2,4,1,Yes,8,2,4,No,Pilates,Low
+37,Female,6,3,2,4,1,No,9,2,4,Yes,Yoga,Medium
+45,Male,7,5,3,4,1,No,10,2,4,Yes,Strength Training,High
+40,Female,6,4,2,3,1,Yes,8,1.5,4,No,Pilates,Low
+37,Male,7,4,2,4,1,No,9,2,3,Yes,Cardio,Medium
+50,Female,6,3,3,5,2,Yes,9,2,4,No,Strength Training,High
+41,Male,7,3,2,4,1,Yes,8,2,4,Yes,Pilates,Low
+48,Female,7,4,2,3,1,No,9,2,3,Yes,Yoga,Medium

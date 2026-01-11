@@ -1,0 +1,7 @@
+{
+  "name": "Pulse AI - Evolutionary Wellness",
+  "description": "An AI-powered sanctuary for predictive stress management, personalized wellness plans, and gamified mental health evolution.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
