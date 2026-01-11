@@ -4,9 +4,9 @@ import { StressPredictionData, PredictionResult, StressLevel } from "../types";
 
 // Always use the specified initialization pattern for GoogleGenAI with a named parameter
 const getApiKey = () => {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
   if (!apiKey) {
-    console.error('Gemini API key not found. Please set GEMINI_API_KEY environment variable.');
+    console.error('Gemini API key not found. Please set VITE_GEMINI_API_KEY environment variable.');
     throw new Error('Gemini API key is required');
   }
   return apiKey;
