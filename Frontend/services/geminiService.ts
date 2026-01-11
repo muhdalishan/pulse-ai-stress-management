@@ -3,7 +3,16 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { StressPredictionData, PredictionResult, StressLevel } from "../types";
 
 // Always use the specified initialization pattern for GoogleGenAI with a named parameter
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getApiKey = () => {
+  const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  if (!apiKey) {
+    console.error('Gemini API key not found. Please set GEMINI_API_KEY environment variable.');
+    throw new Error('Gemini API key is required');
+  }
+  return apiKey;
+};
+
+const ai = new GoogleGenAI({ apiKey: getApiKey() });
 
 export const analyzeStressLevel = async (data: StressPredictionData): Promise<PredictionResult> => {
   try {
