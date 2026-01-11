@@ -13,12 +13,9 @@
 
 [context.production.environment]
   REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
 
 [context.deploy-preview.environment]
   REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
 
 [context.branch-deploy.environment]
   REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
