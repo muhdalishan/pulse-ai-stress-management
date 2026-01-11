@@ -14,7 +14,8 @@ import {
   Activity,
   Trophy,
   User as UserIcon,
-  Info
+  Info,
+  BarChart3
 } from 'lucide-react';
 import StressForm from './components/StressForm';
 import Chatbot from './components/Chatbot';
@@ -23,6 +24,7 @@ import ReliefTools from './components/ReliefTools';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import About from './components/About';
+import Analytics from './components/Analytics';
 import { UserStats } from './types';
 
 const App: React.FC = () => {
@@ -95,6 +97,7 @@ const App: React.FC = () => {
             <NavLink to="/chat" icon={<MessageSquare size={18} />} label="Pulse Bot" />
             <NavLink to="/articles" icon={<BookOpen size={18} />} label="Mind Lab" />
             <NavLink to="/tools" icon={<Wind size={18} />} label="Calm Space" />
+            <NavLink to="/analytics" icon={<BarChart3 size={18} />} label="Analytics" />
             <NavLink to="/about" icon={<Info size={18} />} label="About" />
           </div>
 
@@ -125,6 +128,7 @@ const App: React.FC = () => {
               <MobileNavLink to="/chat" icon={<MessageSquare size={20} />} label="PulseBotVault" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/articles" icon={<BookOpen size={20} />} label="MindLabZenith" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/tools" icon={<Wind size={20} />} label="CalmSpace" onClick={() => setIsSidebarOpen(false)} />
+              <MobileNavLink to="/analytics" icon={<BarChart3 size={20} />} label="Analytics" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/profile" icon={<UserIcon size={20} />} label="Evolution" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/about" icon={<Info size={20} />} label="About Us" onClick={() => setIsSidebarOpen(false)} />
             </div>
@@ -138,6 +142,7 @@ const App: React.FC = () => {
             <Route path="/chat" element={<Chatbot />} />
             <Route path="/articles" element={<WellnessArticles addPoints={addPoints} />} />
             <Route path="/tools" element={<ReliefTools addPoints={addPoints} />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="/profile" element={<Profile userStats={userStats} updateUserStats={updateUserStats} />} />
             <Route path="/about" element={<About />} />
           </Routes>

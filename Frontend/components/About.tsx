@@ -161,54 +161,6 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* ML Model Details */}
-      <div className="glass p-8 rounded-3xl border border-white/10">
-        <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-          <Cpu className="text-purple-400" />
-          Machine Learning Model
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-purple-400">Model Specifications</h3>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Algorithm</span>
-                <span className="font-bold text-purple-300">RandomForest Classifier</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Accuracy</span>
-                <span className="font-bold text-emerald-300">84.27%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Features</span>
-                <span className="font-bold text-cyan-300">13 Lifestyle Factors</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Training Data</span>
-                <span className="font-bold text-amber-300">Comprehensive Dataset</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-purple-400">Input Features</h3>
-            <div className="grid grid-cols-2 gap-2 text-sm">
-              {[
-                'Age', 'Gender', 'Sleep Duration', 'Sleep Quality',
-                'Physical Activity', 'Screen Time', 'Caffeine Intake', 'Smoking Habit',
-                'Work Hours', 'Travel Time', 'Social Interactions', 'Meditation Practice', 'Exercise Type'
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 p-2 bg-white/5 rounded">
-                  <Zap className="text-indigo-400" size={12} />
-                  <span className="text-slate-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* How It Works */}
       <div className="glass p-8 rounded-3xl border border-white/10">
         <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
