@@ -12,13 +12,13 @@
   status = 200
 
 [context.production.environment]
-  VITE_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  VITE_GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
+  REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
+  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
 
 [context.deploy-preview.environment]
-  VITE_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  VITE_GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
+  REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
+  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
 
 [context.branch-deploy.environment]
-  VITE_API_URL = "https://pulse-ai-stress-management.onrender.com"
-  VITE_GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
+  REACT_APP_API_URL = "https://pulse-ai-stress-management.onrender.com"
+  GEMINI_API_KEY = "AIzaSyCqr9BQafnKOLmmjAtpsTXwtFbXYCMNtXw"
