@@ -300,6 +300,9 @@ allowed_origins = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1:3001",
     "http://127.0.0.1:5173",
+    # Production URLs
+    "https://pulseai1.netlify.app",  # Your Netlify deployment
+    "https://*.netlify.app",  # All Netlify deploy previews
 ]
 
 # Add production origins from environment variables
@@ -311,8 +314,6 @@ if production_frontend_url:
 netlify_url = os.getenv("NETLIFY_URL")
 if netlify_url:
     allowed_origins.append(netlify_url)
-    # Also allow deploy previews
-    allowed_origins.append(f"https://*.netlify.app")
 
 app.add_middleware(
     CORSMiddleware,
