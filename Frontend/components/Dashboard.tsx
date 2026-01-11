@@ -34,7 +34,7 @@ const Dashboard: React.FC<{ userStats: UserStats }> = ({ userStats }) => {
       <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <h1 className="text-5xl font-black tracking-tight mb-2">
-            Welcome, <span className="text-indigo-500">{userStats.username || 'Sojourner v1.0'}</span>
+            Welcome, <span className="text-indigo-500">{userStats.username || 'Thomas Shelby'}</span>
           </h1>
           <p className="text-slate-400">Your stress signals are <span className="text-emerald-400 font-bold uppercase tracking-widest text-xs">stabilizing</span>.</p>
         </div>

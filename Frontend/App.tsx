@@ -30,7 +30,7 @@ const App: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [userStats, setUserStats] = useState<UserStats>(() => {
     const saved = localStorage.getItem('pulse_user_stats');
-    return saved ? JSON.parse(saved) : { points: 0, streak: 0, lastCheckIn: '', badges: [], username: 'Sojourner v1.0' };
+    return saved ? JSON.parse(saved) : { points: 0, streak: 0, lastCheckIn: '', badges: [], username: 'Thomas Shelby' };
   });
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-col gap-4">
               <MobileNavLink to="/" icon={<LayoutDashboard size={20} />} label="Dashboard" onClick={() => setIsSidebarOpen(false)} />
-              <MobileNavLink to="/predict" icon={<BrainCircuit size={20} />} label="Sanctuary" onClick={() => setIsSidebarOpen(false)} />
+              <MobileNavLink to="/predict" icon={<BrainCircuit size={20} />} label="Neural Scan" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/chat" icon={<MessageSquare size={20} />} label="PulseBotVault" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/articles" icon={<BookOpen size={20} />} label="MindLabZenith" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/tools" icon={<Wind size={20} />} label="CalmSpace" onClick={() => setIsSidebarOpen(false)} />

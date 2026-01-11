@@ -12,7 +12,7 @@ const badgeConfig: Record<string, { icon: React.ReactNode, color: string, desc: 
 
 const Profile: React.FC<{ userStats: UserStats; updateUserStats: (stats: UserStats) => void }> = ({ userStats, updateUserStats }) => {
   const [isEditingUsername, setIsEditingUsername] = useState(false);
-  const [tempUsername, setTempUsername] = useState(userStats.username || 'Sojourner v1.0');
+  const [tempUsername, setTempUsername] = useState(userStats.username || 'Thomas Shelby');
 
   const handleUsernameSubmit = () => {
     if (tempUsername.trim()) {
@@ -22,11 +22,11 @@ const Profile: React.FC<{ userStats: UserStats; updateUserStats: (stats: UserSta
   };
 
   const handleUsernameCancel = () => {
-    setTempUsername(userStats.username || 'Sojourner v1.0');
+    setTempUsername(userStats.username || 'Thomas Shelby');
     setIsEditingUsername(false);
   };
 
-  const displayUsername = userStats.username || 'Sojourner v1.0';
+  const displayUsername = userStats.username || 'Thomas Shelby';
   return (
     <div className="max-w-4xl mx-auto space-y-10 pb-20">
       <header className="text-center py-10">
