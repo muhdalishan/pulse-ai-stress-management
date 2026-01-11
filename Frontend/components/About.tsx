@@ -327,7 +327,7 @@ const About: React.FC = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 animate-pulse blur-xl opacity-30" />
               <div className="relative w-full h-full rounded-full glass border-2 border-indigo-500/50 overflow-hidden">
                 <img 
-                  src="/pics/alishan.jpg" 
+                  src="/images/alishan.jpg" 
                   alt="Alishan" 
                   className="w-full h-full object-cover"
                 />
@@ -356,7 +356,7 @@ const About: React.FC = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 animate-pulse blur-xl opacity-30" />
               <div className="relative w-full h-full rounded-full glass border-2 border-rose-500/50 overflow-hidden">
                 <img 
-                  src="/pics/aleeza.jpg" 
+                  src="/images/aleeza.jpg" 
                   alt="Aleeza Manzoor CH" 
                   className="w-full h-full object-cover"
                 />

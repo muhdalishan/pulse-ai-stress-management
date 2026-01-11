@@ -87,7 +87,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# public (commented out because we need to track our static assets)
 
 # Vite build tool
 dist/

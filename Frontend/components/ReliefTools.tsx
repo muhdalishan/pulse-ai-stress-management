@@ -148,17 +148,17 @@ const ReliefTools: React.FC<{ addPoints: (amount: number, badge?: string) => voi
               <SoundscapeItem 
                 icon={<CloudRain className="text-blue-400" />} 
                 label="Digital Rain" 
-                audioFile="/Audio/rain.mp3"
+                audioFile="/audio/rain.mp3"
               />
               <SoundscapeItem 
                 icon={<Waves className="text-cyan-400" />} 
                 label="Ethereal Pulse" 
-                audioFile="/Audio/pulse.mp3"
+                audioFile="/audio/pulse.mp3"
               />
               <SoundscapeItem 
                 icon={<Trees className="text-emerald-400" />} 
                 label="Carbon Forest" 
-                audioFile="/Audio/forest.mp3"
+                audioFile="/audio/forest.mp3"
               />
             </div>
           </div>
