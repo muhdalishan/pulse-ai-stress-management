@@ -288,16 +288,25 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
       {/* Impact Legend */}
       <div className="flex items-center justify-center gap-6 text-sm">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded bg-blue-500"></div>
-          <span className="text-slate-400">Low Impact</span>
+          <div 
+            className="w-3 h-3 rounded" 
+            style={{ background: 'hsl(200, 70%, 50%)' }}
+          ></div>
+          <span className="text-slate-400">Low Impact (5-8%)</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded bg-purple-500"></div>
-          <span className="text-slate-400">Medium Impact</span>
+          <div 
+            className="w-3 h-3 rounded" 
+            style={{ background: 'hsl(170, 70%, 50%)' }}
+          ></div>
+          <span className="text-slate-400">Medium Impact (9-14%)</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded bg-red-500"></div>
-          <span className="text-slate-400">High Impact</span>
+          <div 
+            className="w-3 h-3 rounded" 
+            style={{ background: 'hsl(130, 70%, 50%)' }}
+          ></div>
+          <span className="text-slate-400">High Impact (15-18%)</span>
         </div>
       </div>
     </div>
