@@ -194,7 +194,7 @@ const App: React.FC = () => {
               {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             <Link to="/" className="flex items-center gap-2 font-bold text-xl tracking-tight group">
-              <Activity className="text-indigo-500 group-hover:animate-pulse" />
+              <Activity className="text-indigo-500 animate-pulse" />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-500">PULSE AI</span>
             </Link>
           </div>
@@ -227,15 +227,15 @@ const App: React.FC = () => {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsSidebarOpen(false)} />
           <aside className={`relative w-64 h-full glass border-r border-white/10 flex flex-col p-6 gap-6`}>
             <div className="flex items-center gap-2 font-bold text-xl mb-4">
-              <Activity className="text-indigo-500" />
+              <Activity className="text-indigo-500 animate-pulse" />
               <span>PULSE AI</span>
             </div>
             <div className="flex flex-col gap-4">
               <MobileNavLink to="/" icon={<LayoutDashboard size={20} />} label="Dashboard" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/predict" icon={<BrainCircuit size={20} />} label="Neural Scan" onClick={() => setIsSidebarOpen(false)} />
-              <MobileNavLink to="/chat" icon={<MessageSquare size={20} />} label="PulseBotVault" onClick={() => setIsSidebarOpen(false)} />
-              <MobileNavLink to="/articles" icon={<BookOpen size={20} />} label="MindLabZenith" onClick={() => setIsSidebarOpen(false)} />
-              <MobileNavLink to="/tools" icon={<Wind size={20} />} label="CalmSpace" onClick={() => setIsSidebarOpen(false)} />
+              <MobileNavLink to="/chat" icon={<MessageSquare size={20} />} label="Pulse Bot" onClick={() => setIsSidebarOpen(false)} />
+              <MobileNavLink to="/articles" icon={<BookOpen size={20} />} label="Mind Lab" onClick={() => setIsSidebarOpen(false)} />
+              <MobileNavLink to="/tools" icon={<Wind size={20} />} label="Calm Space" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/analytics" icon={<BarChart3 size={20} />} label="Analytics" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/profile" icon={<UserIcon size={20} />} label="Evolution" onClick={() => setIsSidebarOpen(false)} />
               <MobileNavLink to="/about" icon={<Info size={20} />} label="About Us" onClick={() => setIsSidebarOpen(false)} />

@@ -117,7 +117,7 @@ const StressResultCard: React.FC<{
     <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 pb-20">
       <div className={`glass rounded-3xl p-10 border text-center shadow-2xl ${getLevelColor()}`}>
         <div className={`w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-6 ${getLevelBg()}`}>
-          <Activity size={48} />
+          <Activity className="animate-pulse" size={48} />
         </div>
         <h2 className="text-2xl font-semibold opacity-80 uppercase tracking-widest mb-1">Pulse Score</h2>
         <h1 className="text-6xl font-bold mb-4">{result.level}</h1>

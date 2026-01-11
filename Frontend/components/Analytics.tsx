@@ -241,12 +241,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
   const renderFeatureHeatMap = () => (
     <div className="glass p-6 rounded-3xl border border-white/10">
       <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-        <Activity className="text-purple-400" size={20} />
-        Interactive Feature Impact Grid
+        <Activity className="text-purple-400 animate-pulse" size={20} />
+        Heat Map
       </h3>
       
       {/* Compact Grid - 4x3 layout */}
-      <div className="grid grid-cols-4 gap-3 max-w-3xl mx-auto mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 max-w-6xl mx-auto mb-6">
         {featureImportanceData.slice(0, 12).map((item, index) => {
           const intensity = item.importance / 0.18;
           const hue = 240 - (intensity * 120);
@@ -254,17 +254,17 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
           return (
             <div
               key={item.feature}
-              className="relative h-20 rounded-xl border border-white/10 overflow-hidden group hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="relative h-16 sm:h-20 rounded-xl border border-white/10 overflow-hidden group hover:scale-105 transition-all duration-300 cursor-pointer"
               style={{
                 background: `linear-gradient(135deg, hsl(${hue}, 70%, ${25 + intensity * 35}%), hsl(${hue}, 80%, ${35 + intensity * 25}%))`,
                 boxShadow: `0 4px ${intensity * 15}px hsla(${hue}, 70%, 50%, 0.4)`
               }}
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-2">
-                <div className="text-xs font-bold text-white text-center leading-tight mb-1">
-                  {item.feature.length > 14 ? item.feature.substring(0, 14) + '...' : item.feature}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-1 sm:p-2">
+                <div className="text-xs sm:text-xs font-bold text-white text-center leading-tight mb-1">
+                  {item.feature.length > 10 ? item.feature.substring(0, 10) + '...' : item.feature}
                 </div>
-                <div className="text-lg font-black text-white">
+                <div className="text-sm sm:text-lg font-black text-white">
                   {(item.importance * 100).toFixed(1)}%
                 </div>
                 <div className="text-xs text-white/70 font-semibold">
@@ -275,8 +275,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
               {/* Hover Details */}
               <div className="absolute inset-0 bg-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center text-white p-2">
-                  <div className="font-bold text-sm mb-1">{item.feature}</div>
-                  <div className="text-xl font-black mb-1">{(item.importance * 100).toFixed(1)}%</div>
+                  <div className="font-bold text-xs sm:text-sm mb-1">{item.feature}</div>
+                  <div className="text-lg sm:text-xl font-black mb-1">{(item.importance * 100).toFixed(1)}%</div>
                   <div className="text-xs opacity-80">Impact Rank #{item.rank}</div>
                 </div>
               </div>
@@ -304,11 +304,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
   );
 
   const renderPerformanceGauges = () => (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       {modelPerformanceData.map((metric, index) => (
-        <div key={metric.metric} className="glass p-6 rounded-3xl border border-white/10">
-          <h4 className="text-lg font-bold mb-4 text-center">{metric.metric}</h4>
-          <ResponsiveContainer width="100%" height={200}>
+        <div key={metric.metric} className="glass p-4 sm:p-6 rounded-3xl border border-white/10">
+          <h4 className="text-base sm:text-lg font-bold mb-4 text-center">{metric.metric}</h4>
+          <ResponsiveContainer width="100%" height={150}>
             <RadialBarChart 
               cx="50%" 
               cy="50%" 
@@ -329,14 +329,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                 y="50%" 
                 textAnchor="middle" 
                 dominantBaseline="middle" 
-                className="fill-white text-2xl font-bold"
+                className="fill-white text-xl sm:text-2xl font-bold"
               >
                 {metric.value}%
               </text>
             </RadialBarChart>
           </ResponsiveContainer>
           <div className="text-center mt-2">
-            <span className="text-sm text-slate-400">
+            <span className="text-xs sm:text-sm text-slate-400">
               Target: {metric.target}%
             </span>
           </div>
@@ -538,39 +538,39 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
   return (
     <div className="max-w-7xl mx-auto space-y-8 pb-20">
       {/* Header */}
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 mb-8">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <BarChart3 className="text-indigo-500" size={48} />
-          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-500">
+          <BarChart3 className="text-indigo-500" size={32} sm:size={48} />
+          <h1 className="text-2xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-500">
             ML Analytics Dashboard
           </h1>
         </div>
-        <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto px-4">
           Comprehensive analysis of PULSE AI's machine learning model performance, 
           feature importance, and prediction accuracy metrics.
         </p>
       </div>
 
       {/* Navigation Tabs */}
-      <div className="flex justify-center">
-        <div className="flex bg-slate-900/50 p-1 rounded-2xl border border-white/5">
+      <div className="flex justify-center mb-6">
+        <div className="flex bg-slate-900/50 p-1 rounded-2xl border border-white/5 overflow-x-auto">
           {[
             { id: 'overview', label: 'Overview', icon: Eye },
-            { id: 'confusion', label: 'Confusion Matrix', icon: Target },
-            { id: 'features', label: 'Feature Analysis', icon: Zap },
+            { id: 'confusion', label: 'Matrix', icon: Target },
+            { id: 'features', label: 'Features', icon: Zap },
             { id: 'performance', label: 'Performance', icon: TrendingUp }
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
               onClick={() => setActiveTab(id as any)}
-              className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2 ${
+              className={`flex items-center gap-2 transition-all px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap ${
                 activeTab === id 
                   ? 'bg-indigo-600 text-white' 
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               <Icon size={16} />
-              {label}
+              <span className="hidden sm:inline">{label}</span>
             </button>
           ))}
         </div>
@@ -580,7 +580,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
       {activeTab === 'overview' && (
         <div className="space-y-8">
           {/* Key Metrics Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { 
                 title: "Model Accuracy", 
@@ -615,26 +615,26 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                 bgColor: "bg-orange-500/10"
               }
             ].map((metric) => (
-              <div key={metric.title} className={`glass p-6 rounded-3xl border border-white/10 ${metric.bgColor}`}>
+              <div key={metric.title} className={`glass p-4 sm:p-6 rounded-3xl border border-white/10 ${metric.bgColor}`}>
                 <div className="flex items-center justify-between mb-2">
-                  <metric.icon className={metric.color} size={24} />
+                  <metric.icon className={`${metric.color} ${metric.icon === Activity ? 'animate-pulse' : ''}`} size={20} />
                   <span className="text-xs text-emerald-400 font-semibold">{metric.change}</span>
                 </div>
-                <h3 className="text-sm text-slate-400 mb-1">{metric.title}</h3>
-                <p className={`text-2xl font-bold ${metric.color}`}>{metric.value}</p>
+                <h3 className="text-xs sm:text-sm text-slate-400 mb-1">{metric.title}</h3>
+                <p className={`text-xl sm:text-2xl font-bold ${metric.color}`}>{metric.value}</p>
               </div>
             ))}
           </div>
 
           {/* Main Charts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8">
             {renderStressPieChart()}
             {renderTrendsChart()}
           </div>
 
           {/* Performance Gauges */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-center">Model Performance Metrics</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-center">Model Performance Metrics</h3>
             {renderPerformanceGauges()}
           </div>
 
@@ -687,12 +687,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
           </div>
 
           {/* Quick Insights */}
-          <div className="glass p-6 rounded-3xl border border-white/10">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <div className="glass p-4 sm:p-6 rounded-3xl border border-white/10">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
               <Eye className="text-indigo-400" size={20} />
               Quick Insights
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
               {[
                 {
                   title: "Stress Distribution",
@@ -731,12 +731,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                   color: "border-l-cyan-400"
                 }
               ].map((insight) => (
-                <div key={insight.title} className={`p-4 bg-white/5 rounded-xl border-l-4 ${insight.color}`}>
+                <div key={insight.title} className={`p-3 sm:p-4 bg-white/5 rounded-xl border-l-4 ${insight.color}`}>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xl">{insight.icon}</span>
-                    <h4 className="font-semibold">{insight.title}</h4>
+                    <span className="text-lg sm:text-xl">{insight.icon}</span>
+                    <h4 className="font-semibold text-sm sm:text-base">{insight.title}</h4>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">{insight.insight}</p>
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{insight.insight}</p>
                 </div>
               ))}
             </div>
@@ -746,16 +746,16 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
 
       {activeTab === 'confusion' && (
         <div className="space-y-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8">
             {renderConfusionMatrix()}
             
             {/* Enhanced Classification Metrics */}
-            <div className="glass p-6 rounded-3xl border border-white/10">
-              <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+            <div className="glass p-4 sm:p-6 rounded-3xl border border-white/10">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
                 <Target className="text-emerald-400" size={20} />
                 Classification Analysis
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {[
                   { 
                     label: 'True Positives', 
@@ -808,7 +808,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
           </div>
 
           {/* Detailed Performance Breakdown */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 title: "Low Stress Detection",
@@ -835,23 +835,23 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
                 color: "border-red-500 bg-red-500/5"
               }
             ].map((category) => (
-              <div key={category.title} className={`p-6 rounded-xl border ${category.color}`}>
-                <h4 className="font-bold mb-4">{category.title}</h4>
-                <div className="space-y-3">
+              <div key={category.title} className={`p-4 sm:p-6 rounded-xl border ${category.color}`}>
+                <h4 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">{category.title}</h4>
+                <div className="space-y-2 sm:space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-sm text-slate-400">Accuracy</span>
-                    <span className="font-semibold">{category.accuracy}</span>
+                    <span className="text-xs sm:text-sm text-slate-400">Accuracy</span>
+                    <span className="font-semibold text-sm sm:text-base">{category.accuracy}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-sm text-slate-400">Precision</span>
-                    <span className="font-semibold">{category.precision}</span>
+                    <span className="text-xs sm:text-sm text-slate-400">Precision</span>
+                    <span className="font-semibold text-sm sm:text-base">{category.precision}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-sm text-slate-400">Recall</span>
-                    <span className="font-semibold">{category.recall}</span>
+                    <span className="text-xs sm:text-sm text-slate-400">Recall</span>
+                    <span className="font-semibold text-sm sm:text-base">{category.recall}</span>
                   </div>
                 </div>
-                <div className="mt-4 p-3 bg-white/5 rounded-lg">
+                <div className="mt-3 sm:mt-4 p-2 sm:p-3 bg-white/5 rounded-lg">
                   <p className="text-xs text-slate-400 leading-relaxed">{category.insights}</p>
                 </div>
               </div>
@@ -1163,7 +1163,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
           {/* Model Comparison & Benchmarks */}
           <div className="glass p-6 rounded-3xl border border-white/10">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Activity className="text-yellow-400" size={20} />
+              <Activity className="text-yellow-400 animate-pulse" size={20} />
               Model Benchmarks & Comparison
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1270,54 +1270,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ warmupService }) => {
           </div>
         </div>
       )}
-
-      {/* Machine Learning Model Details */}
-      <div className="glass p-8 rounded-3xl border border-white/10 mt-8">
-        <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-          <Cpu className="text-purple-400" />
-          Machine Learning Model
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-purple-400">Model Specifications</h3>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Algorithm</span>
-                <span className="font-bold text-purple-300">RandomForest Classifier</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Accuracy</span>
-                <span className="font-bold text-emerald-300">84.27%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Features</span>
-                <span className="font-bold text-cyan-300">13 Lifestyle Factors</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
-                <span className="text-slate-300">Training Data</span>
-                <span className="font-bold text-amber-300">Comprehensive Dataset</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-purple-400">Input Features</h3>
-            <div className="grid grid-cols-2 gap-2 text-sm">
-              {[
-                'Age', 'Gender', 'Sleep Duration', 'Sleep Quality',
-                'Physical Activity', 'Screen Time', 'Caffeine Intake', 'Smoking Habit',
-                'Work Hours', 'Travel Time', 'Social Interactions', 'Meditation Practice', 'Exercise Type'
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 p-2 bg-white/5 rounded">
-                  <Zap className="text-indigo-400" size={12} />
-                  <span className="text-slate-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
   );
