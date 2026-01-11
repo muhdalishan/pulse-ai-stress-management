@@ -35,7 +35,7 @@ const Chatbot: React.FC = () => {
     ];
   };
 
-  // Load clicked buttons state from localStorage
+  // Load clicked buttons state from localStorage - but make each button independent
   const loadClickedButtons = () => {
     try {
       const saved = localStorage.getItem('pulsebot-clicked-buttons');
@@ -62,7 +62,7 @@ const Chatbot: React.FC = () => {
     }
   }, [messages]);
 
-  // Save clicked buttons state to localStorage whenever it changes
+  // Save clicked buttons state to localStorage - each button independently
   useEffect(() => {
     try {
       localStorage.setItem('pulsebot-clicked-buttons', JSON.stringify(clickedButtons));
@@ -246,22 +246,22 @@ const Chatbot: React.FC = () => {
     return userAsksForLearning && botSuggestsArticles;
   };
 
-  const handleTakeTest = () => {
-    setClickedButtons(prev => ({ ...prev, neuralScan: true }));
+  const handleTakeTest = (messageId: string) => {
+    setClickedButtons(prev => ({ ...prev, [`neuralScan_${messageId}`]: true }));
     navigate('/predict');
   };
 
-  const handleVisitCalmSpace = () => {
-    setClickedButtons(prev => ({ ...prev, calmSpace: true }));
+  const handleVisitCalmSpace = (messageId: string) => {
+    setClickedButtons(prev => ({ ...prev, [`calmSpace_${messageId}`]: true }));
     navigate('/tools');
   };
 
-  const handleVisitArticles = () => {
-    setClickedButtons(prev => ({ ...prev, articles: true }));
+  const handleVisitArticles = (messageId: string) => {
+    setClickedButtons(prev => ({ ...prev, [`articles_${messageId}`]: true }));
     navigate('/articles');
   };
 
-  // Function to clear chat history (useful for testing or user preference)
+  // Function to clear chat history and reset all button states
   const clearChatHistory = () => {
     const defaultMessage = {
       id: '1',
@@ -269,10 +269,24 @@ const Chatbot: React.FC = () => {
       text: "Hello, I'm PulseBot, your specialized stress management companion. I'm here to help you with stress relief techniques, meditation guidance, breathing exercises, and mental wellness strategies. How can I support your journey to better mental health today?",
       timestamp: new Date()
     };
+    
+    // Reset all states
     setMessages([defaultMessage]);
-    setClickedButtons({ neuralScan: false, calmSpace: false, articles: false }); // Reset clicked buttons
+    setClickedButtons({});
+    setLastUserMessage('');
+    setInput('');
+    
+    // Clear localStorage
     localStorage.removeItem('pulsebot-chat-history');
     localStorage.removeItem('pulsebot-clicked-buttons');
+    localStorage.removeItem('pulsebot-conversation-id');
+    
+    // Scroll to top after reset
+    setTimeout(() => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollTop = 0;
+      }
+    }, 100);
   };
 
   useEffect(() => {
@@ -350,15 +364,18 @@ const Chatbot: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-4 text-xs text-slate-500 italic">
-          <Heart size={14} className="text-rose-500" />
-          Healing-mode activated
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 text-xs text-slate-500 italic">
+            <Heart size={14} className="text-rose-500" />
+            Healing-mode activated
+          </div>
           <button
             onClick={clearChatHistory}
-            className="ml-4 px-2 py-1 text-xs text-slate-400 hover:text-slate-300 border border-slate-600 hover:border-slate-500 rounded transition-colors"
-            title="Clear chat history"
+            className="px-3 py-2 text-xs font-medium text-slate-300 hover:text-white bg-slate-800/50 hover:bg-slate-700/50 border border-slate-600 hover:border-slate-500 rounded-xl transition-all duration-200 flex items-center gap-2"
+            title="Reset conversation and show navigation buttons again"
           >
-            Clear History
+            <Sparkles size={12} />
+            Reset Chat
           </button>
         </div>
       </header>
@@ -385,11 +402,11 @@ const Chatbot: React.FC = () => {
                 </div>
                 <div className={`p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-indigo-600 text-white shadow-indigo-500/10' : 'bg-white/5 border border-white/5 text-slate-200'}`}>
                   {msg.text}
-                  {/* Show test button for bot messages that suggest taking the test - only when contextually appropriate and not clicked before */}
-                  {msg.role === 'model' && !clickedButtons.neuralScan && shouldShowTestButton(msg.text, userMessageText) && (
+                  {/* Show test button for bot messages that suggest taking the test - only when contextually appropriate and not clicked for this message */}
+                  {msg.role === 'model' && !clickedButtons[`neuralScan_${msg.id}`] && shouldShowTestButton(msg.text, userMessageText) && (
                     <div className="mt-3 pt-3 border-t border-white/10">
                       <button
-                        onClick={handleTakeTest}
+                        onClick={() => handleTakeTest(msg.id)}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white text-xs font-medium rounded-full transition-all duration-200 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 hover:scale-105"
                       >
                         <Brain size={14} />
@@ -398,11 +415,11 @@ const Chatbot: React.FC = () => {
                       </button>
                     </div>
                   )}
-                  {/* Show CalmSpace button for bot messages that suggest breathing exercises - only when contextually appropriate and not clicked before */}
-                  {msg.role === 'model' && !clickedButtons.calmSpace && shouldShowCalmSpaceButton(msg.text, userMessageText, userStressAnalysis) && (
+                  {/* Show CalmSpace button for bot messages that suggest breathing exercises - only when contextually appropriate and not clicked for this message */}
+                  {msg.role === 'model' && !clickedButtons[`calmSpace_${msg.id}`] && shouldShowCalmSpaceButton(msg.text, userMessageText, userStressAnalysis) && (
                     <div className="mt-3 pt-3 border-t border-white/10">
                       <button
-                        onClick={handleVisitCalmSpace}
+                        onClick={() => handleVisitCalmSpace(msg.id)}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-600 hover:to-teal-700 text-white text-xs font-medium rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 hover:scale-105"
                       >
                         <Wind size={14} />
@@ -411,11 +428,11 @@ const Chatbot: React.FC = () => {
                       </button>
                     </div>
                   )}
-                  {/* Show Articles button for bot messages that suggest educational content - only when contextually appropriate and not clicked before */}
-                  {msg.role === 'model' && !clickedButtons.articles && shouldShowArticlesButton(msg.text, userMessageText) && (
+                  {/* Show Articles button for bot messages that suggest educational content - only when contextually appropriate and not clicked for this message */}
+                  {msg.role === 'model' && !clickedButtons[`articles_${msg.id}`] && shouldShowArticlesButton(msg.text, userMessageText) && (
                     <div className="mt-3 pt-3 border-t border-white/10">
                       <button
-                        onClick={handleVisitArticles}
+                        onClick={() => handleVisitArticles(msg.id)}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-xs font-medium rounded-full transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:scale-105"
                       >
                         <BookOpen size={14} />
@@ -459,9 +476,19 @@ const Chatbot: React.FC = () => {
               <Send size={20} />
             </button>
           </div>
-          <div className="mt-3 flex items-center justify-center gap-2 text-[10px] text-slate-600 uppercase tracking-widest font-semibold">
-            <ShieldAlert size={10} />
-            Non-Emergency Neural Network Support
+          <div className="mt-3 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-[10px] text-slate-600 uppercase tracking-widest font-semibold">
+              <ShieldAlert size={10} />
+              Non-Emergency Neural Network Support
+            </div>
+            <button
+              onClick={clearChatHistory}
+              className="text-[10px] text-slate-500 hover:text-slate-300 uppercase tracking-widest font-semibold transition-colors flex items-center gap-1"
+              title="Reset conversation and restore navigation buttons"
+            >
+              <Sparkles size={10} />
+              Reset
+            </button>
           </div>
         </div>
       </div>
