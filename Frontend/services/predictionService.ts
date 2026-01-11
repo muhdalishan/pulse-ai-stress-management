@@ -354,6 +354,14 @@ class PredictionService {
   }
 
   /**
+   * Set backend health status (can be called by warmup service)
+   */
+  setBackendHealth(isHealthy: boolean): void {
+    this.isBackendHealthy = isHealthy;
+    this.lastHealthCheck = Date.now();
+  }
+
+  /**
    * Predict stress level using backend ML model with fallback and error recovery
    * Requirements: 3.1, 3.2, 3.3, 3.4, 5.1, 5.5
    */
@@ -371,8 +379,11 @@ class PredictionService {
         return this.createOfflineFallbackResponse();
       }
 
-      // Check backend health periodically
-      await this.ensureBackendHealth();
+      // Only check backend health if it hasn't been checked recently
+      // (warmup service may have already checked it)
+      if (Date.now() - this.lastHealthCheck > this.healthCheckInterval) {
+        await this.ensureBackendHealth();
+      }
       console.log('After health check - Backend healthy:', this.isBackendHealthy);
 
       // If backend is known to be unhealthy, return fallback immediately
@@ -711,3 +722,10 @@ export const isUserOffline = (): boolean => {
  * Export the service instance for advanced usage
  */
 export default predictionService;
+
+/**
+ * Set backend health status from external source (like warmup service)
+ */
+export const setBackendHealthStatus = (isHealthy: boolean): void => {
+  predictionService.setBackendHealth(isHealthy);
+};

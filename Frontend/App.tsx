@@ -26,14 +26,122 @@ import Profile from './components/Profile';
 import About from './components/About';
 import Analytics from './components/Analytics';
 import { UserStats } from './types';
+import { setBackendHealthStatus } from './services/predictionService';
+
+// API warming service
+class APIWarmupService {
+  private static instance: APIWarmupService;
+  private isWarmedUp: boolean = false;
+  private warmupPromise: Promise<void> | null = null;
+  private analyticsCache: any = null;
+  private cacheTimestamp: number = 0;
+  private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
+  static getInstance(): APIWarmupService {
+    if (!APIWarmupService.instance) {
+      APIWarmupService.instance = new APIWarmupService();
+    }
+    return APIWarmupService.instance;
+  }
+
+  async warmupAPI(): Promise<void> {
+    if (this.warmupPromise) {
+      return this.warmupPromise;
+    }
+
+    this.warmupPromise = this.performWarmup();
+    return this.warmupPromise;
+  }
+
+  private async performWarmup(): Promise<void> {
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    console.log('🔥 Warming up API backend...');
+
+    try {
+      // 1. Health check to wake up the server
+      const healthPromise = fetch(`${apiUrl}/health`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      // 2. Preload analytics data
+      const analyticsPromise = fetch(`${apiUrl}/analytics`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      // Wait for both requests
+      const [healthResponse, analyticsResponse] = await Promise.all([
+        healthPromise,
+        analyticsPromise
+      ]);
+
+      // Update prediction service health status
+      const isHealthy = healthResponse.ok;
+      setBackendHealthStatus(isHealthy);
+
+      // Cache analytics data if successful
+      if (analyticsResponse.ok) {
+        const analyticsData = await analyticsResponse.json();
+        this.analyticsCache = analyticsData;
+        this.cacheTimestamp = Date.now();
+        console.log('📊 Analytics data preloaded and cached');
+      }
+
+      if (healthResponse.ok) {
+        console.log('✅ Backend API warmed up successfully');
+        this.isWarmedUp = true;
+      } else {
+        console.warn('⚠️ Backend health check failed, but server is responding');
+      }
+
+    } catch (error) {
+      console.warn('⚠️ API warmup failed (this is normal if backend is not running):', error);
+      // Update prediction service that backend is not healthy
+      setBackendHealthStatus(false);
+      // Don't throw error - app should still work with fallback data
+    }
+  }
+
+  getCachedAnalytics(): any | null {
+    if (this.analyticsCache && 
+        Date.now() - this.cacheTimestamp < this.CACHE_DURATION) {
+      console.log('📊 Returning cached analytics data');
+      return this.analyticsCache;
+    }
+    return null;
+  }
+
+  isAPIWarmedUp(): boolean {
+    return this.isWarmedUp;
+  }
+}
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isAPIWarming, setIsAPIWarming] = useState(true);
   const [userStats, setUserStats] = useState<UserStats>(() => {
     const saved = localStorage.getItem('pulse_user_stats');
     return saved ? JSON.parse(saved) : { points: 0, streak: 0, lastCheckIn: '', badges: [], username: 'Thomas Shelby' };
   });
+
+  // API Warmup on app start
+  useEffect(() => {
+    const warmupService = APIWarmupService.getInstance();
+    
+    const performWarmup = async () => {
+      try {
+        await warmupService.warmupAPI();
+      } catch (error) {
+        console.warn('API warmup completed with warnings');
+      } finally {
+        setIsAPIWarming(false);
+      }
+    };
+
+    performWarmup();
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -142,7 +250,7 @@ const App: React.FC = () => {
             <Route path="/chat" element={<Chatbot />} />
             <Route path="/articles" element={<WellnessArticles addPoints={addPoints} />} />
             <Route path="/tools" element={<ReliefTools addPoints={addPoints} />} />
-            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/analytics" element={<Analytics warmupService={APIWarmupService.getInstance()} />} />
             <Route path="/profile" element={<Profile userStats={userStats} updateUserStats={updateUserStats} />} />
             <Route path="/about" element={<About />} />
           </Routes>
@@ -182,3 +290,6 @@ const MobileNavLink: React.FC<{ to: string; icon: React.ReactNode; label: string
 };
 
 export default App;
+
+// Export the warmup service for use in other components
+export { APIWarmupService };
