@@ -114,15 +114,15 @@ const StressResultCard: React.FC<{
   const lifestyleFactors = getLifestyleFactors();
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 pb-20">
-      <div className={`glass rounded-3xl p-10 border text-center shadow-2xl ${getLevelColor()}`}>
-        <div className={`w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-6 ${getLevelBg()}`}>
-          <Activity className="animate-pulse" size={48} />
+    <div className="max-w-4xl mx-auto space-y-4 sm:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 pb-20 px-4">
+      <div className={`glass rounded-3xl p-4 sm:p-6 lg:p-10 border text-center shadow-2xl ${getLevelColor()}`}>
+        <div className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto rounded-full flex items-center justify-center mb-4 sm:mb-6 ${getLevelBg()}`}>
+          <Activity className="animate-pulse" size={32} />
         </div>
-        <h2 className="text-2xl font-semibold opacity-80 uppercase tracking-widest mb-1">Pulse Score</h2>
-        <h1 className="text-6xl font-bold mb-4">{result.level}</h1>
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <div className="h-1.5 w-64 bg-slate-800 rounded-full overflow-hidden">
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold opacity-80 uppercase tracking-widest mb-1">Pulse Score</h2>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">{result.level}</h1>
+        <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
+          <div className="h-1.5 w-48 sm:w-56 lg:w-64 bg-slate-800 rounded-full overflow-hidden">
             <div className="h-full bg-current transition-all duration-1000 ease-out" style={{ width: `${result.score}%` }} />
           </div>
         </div>
@@ -131,27 +131,28 @@ const StressResultCard: React.FC<{
         <div className="mb-4 flex justify-center">
           <button
             onClick={onReset}
-            className="flex items-center gap-2 px-8 py-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all text-white font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="flex items-center gap-2 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all text-white font-semibold text-xs sm:text-sm shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            <RotateCcw size={18} />
-            Reset Neural Map
+            <RotateCcw size={16} className="sm:w-[18px] sm:h-[18px]" />
+            <span className="hidden sm:inline">Reset Neural Map</span>
+            <span className="sm:hidden">Reset</span>
           </button>
         </div>
 
         {/* Model Information Section */}
         {(result.modelName || result.modelScore) && (
-          <div className="mb-4 glass bg-white/5 p-4 rounded-2xl border border-white/5">
-            <div className="flex items-center justify-center gap-6 text-sm">
+          <div className="mb-4 glass bg-white/5 p-3 sm:p-4 rounded-2xl border border-white/5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
               {result.modelName && (
                 <div className="flex items-center gap-2 text-slate-300">
-                  <Brain size={16} className="text-indigo-400" />
+                  <Brain size={14} className="text-indigo-400 sm:w-4 sm:h-4" />
                   <span className="font-semibold">Model:</span>
                   <span className="text-indigo-300">{result.modelName}</span>
                 </div>
               )}
               {result.modelScore && (
                 <div className="flex items-center gap-2 text-slate-300">
-                  <Target size={16} className="text-emerald-400" />
+                  <Target size={14} className="text-emerald-400 sm:w-4 sm:h-4" />
                   <span className="font-semibold">Accuracy:</span>
                   <span className="text-emerald-300">{(result.modelScore * 100).toFixed(1)}%</span>
                 </div>
@@ -161,19 +162,19 @@ const StressResultCard: React.FC<{
         )}
 
         {/* Enhanced Analytics Dashboard */}
-        <div className="mb-10 glass bg-white/5 p-6 rounded-2xl border border-white/5">
-          <h3 className="flex items-center gap-2 font-bold mb-6 text-slate-200">
-            <BarChart3 size={20} className="text-cyan-400" />
-            Personalized Stress Analysis
+        <div className="mb-6 sm:mb-10 glass bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/5">
+          <h3 className="flex items-center justify-center sm:justify-start gap-2 font-bold mb-4 sm:mb-6 text-slate-200 text-sm sm:text-base">
+            <BarChart3 size={18} className="text-cyan-400 sm:w-5 sm:h-5" />
+            <span className="text-center sm:text-left">Personalized Stress Analysis</span>
           </h3>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {/* Left Column - Modern Analytics */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Stress Wave Graph Card */}
-              <div className="bg-gradient-to-br from-slate-500/10 to-slate-600/10 rounded-2xl p-4 border border-slate-500/20">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-slate-300">Stress Waves</span>
+              <div className="bg-gradient-to-br from-slate-500/10 to-slate-600/10 rounded-2xl p-3 sm:p-4 border border-slate-500/20">
+                <div className="flex items-center justify-between mb-2 sm:mb-3">
+                  <span className="text-xs sm:text-sm text-slate-300">Stress Waves</span>
                   <div className="flex items-center gap-1">
                     <div className={`w-2 h-2 rounded-full animate-pulse ${
                       result.level === 'Low' ? 'bg-emerald-400' :
@@ -188,15 +189,15 @@ const StressResultCard: React.FC<{
                   </div>
                 </div>
                 
-                <div className="flex items-end gap-2 mb-3">
-                  <span className={`text-3xl font-bold ${
+                <div className="flex items-end gap-2 mb-2 sm:mb-3">
+                  <span className={`text-2xl sm:text-3xl font-bold ${
                     result.level === 'Low' ? 'text-emerald-400' :
                     result.level === 'Medium' ? 'text-amber-400' :
                     'text-rose-400'
                   }`}>
                     {result.level}
                   </span>
-                  <span className="text-lg text-slate-400 mb-1">Level</span>
+                  <span className="text-sm sm:text-lg text-slate-400 mb-1">Level</span>
                 </div>
                 
                 {/* Animated Wave Graph */}

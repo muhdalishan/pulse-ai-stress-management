@@ -3,12 +3,10 @@ import { useLocation } from 'react-router-dom';
 import { 
   Brain, 
   Target, 
-  Zap, 
   Activity, 
   Shield, 
   Code, 
   Database, 
-  Cpu,
   BarChart3,
   Users,
   Heart,
@@ -280,25 +278,42 @@ const About: React.FC = () => {
               <div className="relative w-full h-full rounded-full glass border-2 border-indigo-500/50 overflow-hidden">
                 <img 
                   src="/images/alishan.jpg" 
-                  alt="Alishan" 
+                  alt="Muhammad Ali Shan" 
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Alishan</h3>
+              <h3 className="text-2xl font-bold text-white">Muhammad Alishan</h3>
               <p className="text-indigo-400 font-mono text-sm">L1S23BSCS0050</p>
+              <p className="text-slate-400 text-sm">Full Stack Developer & AI Engineer</p>
             </div>
             <div className="flex items-center justify-center gap-3 pt-2">
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer">
+              <a 
+                href="https://github.com/muhdalishan" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer"
+                title="GitHub Profile"
+              >
                 <Github size={16} />
-              </div>
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer">
+              </a>
+              <a 
+                href="https://linkedin.com/in/muhdalishan" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer"
+                title="LinkedIn Profile"
+              >
                 <Linkedin size={16} />
-              </div>
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer">
+              </a>
+              <a 
+                href="mailto:l1s23bscs0050@ucp.edu.pk" 
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer"
+                title="Send Email"
+              >
                 <Mail size={16} />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -317,18 +332,34 @@ const About: React.FC = () => {
             <div className="space-y-2">
               <h3 className="text-2xl font-bold text-white">Aleeza Manzoor CH</h3>
               <p className="text-rose-400 font-mono text-sm">L1S23BSCS0082</p>
-              
+              <p className="text-slate-400 text-sm">AI Engineer & Data Scientist</p>
             </div>
             <div className="flex items-center justify-center gap-3 pt-2">
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer">
+              <a 
+                href="https://github.com/aleezamanzoor" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer"
+                title="GitHub Profile"
+              >
                 <Github size={16} />
-              </div>
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer">
+              </a>
+              <a 
+                href="https://linkedin.com/in/aleezamanzoor" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer"
+                title="LinkedIn Profile"
+              >
                 <Linkedin size={16} />
-              </div>
-              <div className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer">
+              </a>
+              <a 
+                href="mailto:aleeza.manzoor@ucp.edu.pk" 
+                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer"
+                title="Send Email"
+              >
                 <Mail size={16} />
-              </div>
+              </a>
             </div>
           </div>
         </div>
