@@ -110,8 +110,8 @@ const Dashboard: React.FC<{ userStats: UserStats }> = ({ userStats }) => {
             <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Users size={24} className="text-purple-400" />
             </div>
-            <h3 className="text-2xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Meet the Team</h3>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">Learn more about PULSE AI and meet the development team.</p>
+            <h3 className="text-2xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Meet the Developer</h3>
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">Learn more about PULSE AI and meet the developer behind this project.</p>
             <div className="flex items-center gap-2 text-indigo-400 text-sm font-bold">Learn More <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" /></div>
           </div>
         </div>

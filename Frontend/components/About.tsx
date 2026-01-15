@@ -8,14 +8,13 @@ import {
   Code, 
   Database, 
   BarChart3,
-  Users,
+  User,
   Heart,
   Lightbulb,
   CheckCircle,
   TrendingUp,
   Globe,
   Lock,
-  User,
   Mail,
   Github,
   Linkedin
@@ -169,7 +168,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center space-y-4">
             <div className="w-16 h-16 mx-auto bg-indigo-500/20 rounded-full flex items-center justify-center">
-              <Users className="text-indigo-400" size={24} />
+              <User className="text-indigo-400" size={24} />
             </div>
             <h3 className="font-bold text-white">1. Data Input</h3>
             <p className="text-sm text-slate-400">
@@ -263,112 +262,90 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Meet the Team */}
+      {/* Meet the Developer */}
       <div id="meet-the-team" className="glass p-8 rounded-3xl border border-white/10">
         <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
-          <Users className="text-purple-400" />
-          Meet the Team
+          <User className="text-purple-400" />
+          Meet the Developer
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Alishan */}
-          <div className="text-center space-y-4">
-            <div className="relative w-32 h-32 mx-auto mb-4">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 animate-pulse blur-xl opacity-30" />
-              <div className="relative w-full h-full rounded-full glass border-2 border-indigo-500/50 overflow-hidden">
-                <img 
-                  src="/images/alishan.jpg" 
-                  alt="Muhammad Ali Shan" 
-                  className="w-full h-full object-cover"
-                />
+        <div className="max-w-5xl mx-auto">
+          {/* Split Layout - Left: Picture, Right: Info */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
+            
+            {/* Vertical Divider Line (Desktop Only) */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-600/50 to-transparent transform -translate-x-1/2"></div>
+            
+            {/* Left Side - Profile Picture & Basic Info */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="relative w-48 h-48 lg:w-56 lg:h-56">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 animate-pulse blur-xl opacity-30" />
+                <div className="relative w-full h-full rounded-full glass border-2 border-indigo-500/50 overflow-hidden">
+                  <img 
+                    src="/images/alishan.jpg" 
+                    alt="Muhammad Ali Shan" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Basic Info Below Picture - All Centered */}
+              <div className="text-center space-y-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white">Muhammad Alishan</h3>
+                <p className="text-indigo-400 font-mono text-base">L1S23BSCS0050</p>
+                <p className="text-lg text-slate-300 font-semibold">Full Stack Developer & AI Engineer</p>
               </div>
             </div>
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Muhammad Alishan</h3>
-              <p className="text-indigo-400 font-mono text-sm">L1S23BSCS0050</p>
-              <p className="text-slate-400 text-sm">Full Stack Developer & AI Engineer</p>
-            </div>
-            <div className="flex items-center justify-center gap-3 pt-2">
-              <a 
-                href="https://github.com/muhdalishan" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer"
-                title="GitHub Profile"
-              >
-                <Github size={16} />
-              </a>
-              <a 
-                href="https://linkedin.com/in/muhdalishan" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer"
-                title="LinkedIn Profile"
-              >
-                <Linkedin size={16} />
-              </a>
-              <a 
-                href="mailto:l1s23bscs0050@ucp.edu.pk" 
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer"
-                title="Send Email"
-              >
-                <Mail size={16} />
-              </a>
-            </div>
-          </div>
-
-          {/* Aleeza */}
-          <div className="text-center space-y-4">
-            <div className="relative w-32 h-32 mx-auto mb-4">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 animate-pulse blur-xl opacity-30" />
-              <div className="relative w-full h-full rounded-full glass border-2 border-rose-500/50 overflow-hidden">
-                <img 
-                  src="/images/aleeza.jpg" 
-                  alt="Aleeza Manzoor CH" 
-                  className="w-full h-full object-cover"
-                />
+            
+            {/* Right Side - Description & Contact */}
+            <div className="space-y-6 text-center lg:text-left">
+              <div className="max-w-xl">
+                <h4 className="text-xl font-semibold text-slate-200 mb-4">About</h4>
+                <p className="text-slate-400 leading-relaxed text-base">
+                  Passionate AI engineer and full-stack developer specializing in machine learning applications for healthcare and wellness. 
+                  Currently pursuing BSCS at University of Central Punjab, with expertise in Python, React, TypeScript, and ML frameworks. 
+                  PULSE AI represents my commitment to leveraging artificial intelligence for mental health and stress management solutions.
+                </p>
               </div>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Aleeza Manzoor CH</h3>
-              <p className="text-rose-400 font-mono text-sm">L1S23BSCS0082</p>
-              <p className="text-slate-400 text-sm">AI Engineer & Data Scientist</p>
-            </div>
-            <div className="flex items-center justify-center gap-3 pt-2">
-              <a 
-                href="https://github.com/aleezamanzoor" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer"
-                title="GitHub Profile"
-              >
-                <Github size={16} />
-              </a>
-              <a 
-                href="https://linkedin.com/in/aleezamanzoor" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer"
-                title="LinkedIn Profile"
-              >
-                <Linkedin size={16} />
-              </a>
-              <a 
-                href="mailto:aleeza.manzoor@ucp.edu.pk" 
-                className="p-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer"
-                title="Send Email"
-              >
-                <Mail size={16} />
-              </a>
+              
+              <div>
+                <h4 className="text-xl font-semibold text-slate-200 mb-4">Connect</h4>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                  <a 
+                    href="https://github.com/muhdalishan" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-indigo-400 hover:bg-indigo-500/20 transition-colors cursor-pointer"
+                    title="GitHub Profile"
+                  >
+                    <Github size={18} />
+                    <span className="text-sm font-medium">GitHub</span>
+                  </a>
+                  <a 
+                    href="https://linkedin.com/in/muhdalishan" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-blue-400 hover:bg-blue-500/20 transition-colors cursor-pointer"
+                    title="LinkedIn Profile"
+                  >
+                    <Linkedin size={18} />
+                    <span className="text-sm font-medium">LinkedIn</span>
+                  </a>
+                  <a 
+                    href="mailto:l1s23bscs0050@ucp.edu.pk" 
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-700/50 text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-pointer"
+                    title="Send Email"
+                  >
+                    <Mail size={18} />
+                    <span className="text-sm font-medium">Email</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-slate-400 text-sm">
-            AI Lab Project of BSCS 6th semester students at the University of Central Punjab, Lahore, Pakistan.
-          </p>
-        </div>
+        
       </div>
 
       {/* Footer */}
